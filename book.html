@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookkeeping</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+      .home-section-one{
+        height: 80vh;
+        /*background-image: url("{% static '/img/web-bg.jpg' %}");*/
+        /*background-size: cover;*/
+        background-color:#062F60;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .home-section-one-image{
+        width: 50%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content:center;
+    }
+    .home-section-one-image img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+    }
+    .home-section-one-cnt{
+        width: 45%;
+        display: flex;
+        height: 70%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .home-section-one-cnt h1{
+        font-weight: 500;
+        color:white;
+        letter-spacing: 1px;
+    }
+    .home-section-one-cnt h1 span{
+        font-weight: bold;
+    }
+    .home-section-one-cnt span{
+        color: white;
+    }
+    .home-section-one-cnt button{
+        background-color: white;
+        color: #062F60;
+        border-radius: 5px;
+        border: hidden;
+        font-size: 14px;
+        font-weight:650;
+        width: 180px;
+        height: 40px;
+
+    }
+    .section-main-p-2{
+        color:white;
+        font-weight:650;
+    }
+    .section-main-p-2 .last-span{
+        color:aquamarine;
+    }
+    .section-main-p-2 i{
+        margin-right:5px;
+        margin-left:5px;
+        color: aquamarine;
+    }
+    .best-accounting-cnt h1{
+        font-weight: 700;
+        color: #062F60;
+    }
+    .best-accounting-cnt p i{
+        margin-right: 10px;
+        color: green;
+    }
+    .accounting-img{
+        width: 100%;
+        height: 50vh;
+    }
+    .accounting-img img{
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+    }
+    .why-choose-us h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .why-choose-us h5{
+        font-weight: 650;
+        margin-bottom: 20px;
+    }
+    .why-choose-us h5 i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us p{
+        margin-bottom: 30px;
+    }
+    .benefit-points{
+        height: auto;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .benefit-points-open{
+        height: auto;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .collapse{
+        width: 100%;
+    }
+    .benefits h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .benefit-points span{
+        font-weight: 700;
+        font-size: 18px;
+        opacity: 0.8;
+        letter-spacing: 1px;
+    }
+    .benefit-points i{
+        font-size: 22px;
+        color: rgb(5, 172, 5);
+    }
+    .approach h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: "Lato", sans-serif;
+  font-style: normal;
+    }
+    .to-top{
+        height: 30px;
+        width: 30px;
+        background-color: #062F60;
+        position: fixed;
+        left: 20px;
+        bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border-radius: 3px;
+        opacity: 0;
+    }
+    .to-top i{
+        color: white;
+        font-size: 16px;
+    }
+    .to-top.active{
+        bottom: 20px;
+        opacity: 1;
+        cursor: pointer;
+    }
+    @media(min-width:320px) and (max-width:480px){
+        .home-section-one{
+            flex-direction: column;
+            height: 100vh;
+        }
+        .home-section-one-cnt{
+            width: 90%;
+            height: 50%;
+            justify-content: space-evenly;
+        }
+        .home-section-one-image{
+            width: 90%;
+            height: 50%;
+        }
+    }
+</style>
+<body>
+<div class="home-section-one">
+<div class="home-section-one-cnt">
+<h1><span>Bookkeeping </span> <br>Services in Dubai</h1>
+<span>Accurate and Reliable Bookkeeping Services Tailored to your Needs</span>
+<a href="#free"><button>FREE CONSULTATION</button></a>
+<p class="section-main-p-2 ">Home<i class="fa-solid fa-angles-right"></i><span>Accounting</span><i class="fa-solid fa-angles-right"></i><span>Accounting Services</span><i class="fa-solid fa-angles-right"></i><span class="last-span">Bookkeeping Services</span></p>
+</div>
+<div class="home-section-one-image">
+    <img src="https://static.vecteezy.com/system/resources/previews/027/851/280/original/young-asian-woman-professional-entrepreneur-standing-in-office-clothing-isolated-png.png">
+</div>
+</div>
+<div class="container mt-5 mb-5">
+    <div class="row gx-4">
+        <div class="col-md-5">
+    <div class="accounting-img">
+        <img src="https://cdn.corporatefinanceinstitute.com/assets/accounting.jpeg" alt="">
+    </div>
+        </div>
+        <div class="col-md-7">
+            <div class="best-accounting-cnt">
+    <h1 class="mb-4">Bookkeeping Services <br> in Dubai</h1>
+   <p>At Young & Right, we understand that accurate and efficient bookkeeping is the foundation of every successful business. Our dedicated team of experienced professionals is here to streamline your financial processes, giving you the freedom to focus on what you do best – growing your business.</p>
+    </div>
+        </div>
+    </div>
+    </div>
+
+    <a class="to-top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
+<div class="container mt-4 mb-4 approach">
+    <h1 class="mb-4">Our Approach</h1>
+    <p class="mb-4">We take a personalized approach to bookkeeping, recognizing that every business has unique needs and challenges. Whether you're a small startup or a large corporation, we tailor our services to suit your specific requirements. From day-to-day transaction recording to comprehensive financial reporting, we've got you covered.</p>
+    <p>Certainly! Let's illustrate the importance of forex rates in bookkeeping with an example involving salary payments:</p>
+    <p>Imagine you have an employee working for your company in Dubai, UAE, but your company's headquarters and accounting operations are based in the United States. The employee's salary is denominated in US dollars (USD), but they are paid in UAE dirhams (AED) since they are working in Dubai.</p>
+    <p>Let's say the employee's monthly salary is $5,000 USD. At the time of payment, the exchange rate is 3.67 AED per USD. Therefore, the employee's salary in AED would be:Salary in AED = Salary in USD × Exchange Rate Salary in AED = $5,000 × 3.67 = 18,350 AED </p>
+    <p>Now, let's consider another scenario where the exchange rate changes before the salary payment is made. Suppose the exchange rate fluctuates to 3.70 AED per USD.</p>
+    <p>In this case, the employee's salary in AED would be:  <br>
+        Salary in AED = Salary in USD × Updated Exchange Rate Salary in AED = $5,000 × 3.70 = 18,500 AED</p>
+        <p>As you can see, even a small change in the exchange rate can have a significant impact on the amount of AED required to pay the employee's salary. This difference of 150 AED ($40.71 USD) may seem relatively small for a single salary payment, but it can add up over time, especially if you have multiple employees or conduct frequent currency transactions.As you can see, even a small change in the exchange rate can have a significant impact on the amount of AED required to pay the employee's salary. This difference of 150 AED ($40.71 USD) may seem relatively small for a single salary payment, but it can add up over time, especially if you have multiple employees or conduct frequent currency transactions.</p>
+        <p>From a bookkeeping perspective, it's essential to accurately record the exchange rates used for currency conversions to ensure the financial statements reflect the true financial position of the company. Fluctuations in exchange rates can affect various aspects of financial reporting, including revenue, expenses, assets, and liabilities, so maintaining accurate records is crucial for transparency and compliance with accounting standards.</p>
+</div>
+
+<div class="container why-choose-us">
+    <h1 class="mb-4">Why Choose Young & Right  for Bookkeeping</h1>
+    <p class="mb-4">At Young & Right , we're more than just number-crunchers—we're your trusted partner in financial success. With our expertise, dedication, and personalized approach, we help you unlock the full potential of bookkeeping for your business.</p>
+    <div class="d-flex flex-column">
+<h5><i class="fa-solid fa-circle-arrow-right"></i>Expertise :</h5>
+<p class="">Highlight the expertise and qualifications of your team members, showcasing their experience and knowledge in bookkeeping and accounting. Emphasize any certifications, accreditations, or specialized training that sets your team apart.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Personalized Service :</h5>
+        <p>Offer personalized attention and customized solutions tailored to each client's unique needs and goals. Showcase your commitment to understanding their business and providing tailored recommendations and support.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Reliability :</h5>
+        <p>Assure clients of your reliability and consistency in delivering accurate and timely bookkeeping services. Highlight your track record of meeting deadlines, maintaining compliance, and providing dependable support.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Technology and Innovation :</h5>
+        <p>Demonstrate your use of advanced accounting software and technology solutions to streamline processes, enhance efficiency, and provide real-time insights. Showcase any proprietary tools or platforms that differentiate your services.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Transparent Communication :</h5>
+        <p>Emphasize your commitment to transparent communication and open collaboration with clients. Highlight your accessibility, responsiveness, and willingness to address questions, concerns, and feedback promptly.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Compliance and Accuracy :</h5>
+        <p>Assure clients of your commitment to compliance with regulatory requirements and adherence to industry standards for accuracy and precision. Showcase your attention to detail and thoroughness in maintaining meticulous records.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Cost-Effectiveness :</h5>
+        <p>Highlight the cost-effectiveness of your services compared to hiring in-house staff or other alternatives. Showcase the value proposition of outsourcing bookkeeping to your company, emphasizing cost savings and return on investment.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Scalability :</h5>
+        <p> Assure clients of your ability to scale your services according to their needs as their business grows and evolves. Showcase your flexibility and adaptability in accommodating changing requirements and volumes.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Client Satisfaction :</h5>
+        <p>Share testimonials, case studies, or client success stories that highlight the positive experiences of past clients with your bookkeeping services. Showcase your commitment to client satisfaction and building long-term relationships.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Industry Experience</h5>
+        <p>Highlight any specific industry expertise or specialization that sets your company apart. Showcase your understanding of industry-specific challenges, regulations, and best practices, positioning your company as a trusted partner in their sector.</p>
+    </div>
+</div>
+
+<div class="container mt-5 benefits">
+    <h1 class="mb-5">Benefits of Our Bookkeeping Services in Dubai</h1>
+<div class="benefit-points">
+    <div class="benefit-points-open">
+        <span>Financial Control</span>
+        <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+        </div>
+        <div class="collapse mt-2 mb-3" id="collapseExample1">
+            <p>Bookkeeping provides businesses with a clear picture of their financial health by accurately recording all transactions, including income, expenses, assets, and liabilities. This information enables business owners and managers to make informed decisions and maintain control over their finances.</p>
+    </div>
+</div>
+<div class="benefit-points">
+    <div class="benefit-points-open">
+    <span>Budgeting and Planning</span>
+    <a data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+    </div>
+    <div class="collapse mt-2 mb-3" id="collapseExample2">
+        <p>By keeping detailed records of income and expenses, bookkeeping helps businesses create budgets and financial forecasts. These tools are essential for planning future expenditures, setting realistic financial goals, and identifying areas for cost-saving or revenue growth.</p>
+    </div>
+    </div>
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Tax Compliance</span>
+            <a data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample3">
+            <p>Proper bookkeeping ensures that businesses comply with tax laws and regulations by accurately tracking income, deductible expenses, and tax liabilities. Organized financial records make it easier to prepare and file tax returns, reducing the risk of errors, penalties, and audits.</p>
+        </div>
+    </div>
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Business Analysis</span>
+            <a data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample4">
+            <p>Bookkeeping allows businesses to analyze their financial performance over time, comparing current results to previous periods and industry benchmarks. This analysis helps identify trends, strengths, weaknesses, and opportunities for improvement, guiding strategic decision-making and business growth.</p>
+        </div>
+    </div>
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Creditworthiness</span>
+            <a data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample5">
+            <p>Well-maintained financial records enhance a business's creditworthiness by providing lenders, investors, and creditors with transparent and reliable information about its financial position and performance. This credibility improves access to financing options and favorable terms for loans, investments, and partnerships.</p>
+        </div>
+    </div>
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Cash Flow Management</span>
+            <a data-bs-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample7">
+            <p>Bookkeeping helps businesses manage their cash flow effectively by monitoring incoming and outgoing funds, identifying cash shortages or surpluses, and planning for future expenses and investments. This proactive approach minimizes the risk of cash flow problems and ensures financial stability.</p>
+        </div>
+    </div>  
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Legal Protection</span>
+            <a data-bs-toggle="collapse" href="#collapseExample8" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample8">
+            <p>Accurate bookkeeping provides legal protection for businesses in case of disputes, lawsuits, or regulatory investigations. Detailed financial records serve as evidence of transactions, contracts, and compliance with laws and regulations, reducing the risk of legal liabilities and financial penalties.</p>
+        </div>
+    </div>
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Operational Efficiency</span>
+            <a data-bs-toggle="collapse" href="#collapseExample9" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample9">
+            <p>Efficient bookkeeping processes streamline administrative tasks, reduce paperwork, and eliminate manual errors, saving time and resources for businesses. Automation tools and software solutions further improve efficiency by automating routine tasks, such as data entry, reconciliation, and reporting.</p>
+        </div>
+    </div>  
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Business Growth</span>
+            <a data-bs-toggle="collapse" href="#collapseExample10" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample10">
+            <p>By providing insights into financial performance, opportunities, and risks, bookkeeping supports business growth and expansion initiatives. It helps businesses identify areas for investment, assess the feasibility of new projects, and secure funding from investors or lenders.</p>
+        </div>
+    </div>
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Strategic Planning</span>
+            <a data-bs-toggle="collapse" href="#collapseExample11" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample11">
+            <p>Harness the power of financial data to develop comprehensive budgets, forecasts, and strategic plans. By analyzing trends and identifying opportunities, you can set achievable goals and chart a course for long-term success.</p>
+        </div>
+    </div> 
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Enhanced Decision-Making</span>
+            <a data-bs-toggle="collapse" href="#collapseExample12" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample12">
+            <p>Empower your team with accurate and timely financial information that supports informed decision-making at every level of your organization. From resource allocation to pricing strategies, data-driven insights drive better outcomes.</p>
+        </div>
+    </div> 
+        
+</div>
+
+<div class="container mt-5 mb-5">
+    <div class="row gx-4">
+        <div class="col-md-5">
+    <div class="accounting-img">
+        <img src="https://blog.ipleaders.in/wp-content/uploads/2020/11/bookkeeping-vs-accounting-Final.jpg" alt="">
+    </div>
+        </div>
+        <div class="col-md-7">
+            <div class="best-accounting-cnt">
+    <h1 class="mb-4">Our Approach <br> in Bookkeeping</h1>
+   <p>We take a personalized approach to bookkeeping, recognizing that every business has unique needs and challenges. Whether you're a small startup or a large corporation, we tailor our services to suit your specific requirements. From day-to-day transaction recording to comprehensive financial reporting, we've got you covered.</p>
+    </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        const toTop = document.querySelector(".to-top");
+
+        window.addEventListener("scroll", ()=>{
+            if(window.pageYOffset > 100){
+                toTop.classList.add("active");
+
+            }else{
+                toTop.classList.remove("active");
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"  crossorigin="anonymous" ></script>
+</body>
+</html>

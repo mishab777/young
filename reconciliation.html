@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reconciliation</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+      .home-section-one{
+        height: 80vh;
+        /*background-image: url("{% static '/img/web-bg.jpg' %}");*/
+        /*background-size: cover;*/
+        background-color:#062F60;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .home-section-one-image{
+        width: 50%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content:center;
+    }
+    .home-section-one-image img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+    }
+    .home-section-one-cnt{
+        width: 45%;
+        display: flex;
+        height: 80%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .home-section-one-cnt h1{
+        font-weight: 500;
+        color:white;
+        letter-spacing: 1px;
+    }
+    .home-section-one-cnt h1 span{
+        font-weight: bold;
+    }
+    .home-section-one-cnt span{
+        color: white;
+    }
+    .home-section-one-cnt button{
+        background-color: white;
+        color: #062F60;
+        border-radius: 5px;
+        border: hidden;
+        font-size: 14px;
+        font-weight:650;
+        width: 180px;
+        height: 40px;
+
+    }
+    .section-main-p-2{
+        color:white;
+        font-weight:650;
+    }
+    .section-main-p-2 .last-span{
+        color:aquamarine;
+    }
+    .section-main-p-2 i{
+        margin-right:5px;
+        margin-left:5px;
+        color: aquamarine;
+    }
+    .section-main-p-2 a{
+        text-decoration: none;
+        color: white;
+    }
+    .best-accounting-cnt h1{
+        font-weight: 700;
+        color: #062F60;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .best-accounting-cnt p i{
+        margin-right: 10px;
+        color: green;
+    }
+    .accounting-img{
+        width: 100%;
+        height: 50vh;
+    }
+    .accounting-img img{
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+    }
+    .services h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .services p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .why-choose-us h5{
+        font-weight: 650;
+        margin-bottom: 20px;
+    }
+    .why-choose-us h5 i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us p{
+        margin-bottom: 30px;
+    }
+    .benefit-points{
+        height: auto;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .benefit-points-open{
+        height: auto;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .collapse{
+        width: 100%;
+    }
+    .benefits h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .benefit-points span{
+        font-weight: 700;
+        font-size: 18px;
+        opacity: 0.8;
+        letter-spacing: 1px;
+    }
+    .benefit-points i{
+        font-size: 22px;
+        color: rgb(5, 172, 5);
+    }
+    .processes h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .process-card{
+        width: 80%;
+        margin: auto;
+        height: 180px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    .process-card img{
+        width: 50px;
+        height: 50px;
+    }
+    .payment-package{
+        height: auto;
+        width: 100%;
+        background-color: #e6f7ff;
+    }
+    .payment-card{
+        width: 100%;
+        height: auto;
+        display: flex;
+        padding-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        background-color: white;
+        justify-content: space-evenly;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    }
+    .payment-card-plan{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding:30px;
+        border-bottom-style: dashed;
+border-bottom-color: rgb(158, 157, 157);
+border-bottom-width: 1px;
+    }
+    .payment-header{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .payment-card-plan h1{
+        text-align: center;
+        color: rgb(5, 172, 5);
+        font-size: 35px;
+        font-weight: 400;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .payment-card-plan h1 span{
+        font-weight: 800;
+    }
+    .payment-card-plan h3{
+        font-size: 20px;
+        font-weight: 650;
+    }
+    .package-details{
+        width: 90%;
+        padding: 10px;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-direction: column;
+        display: flex;
+    }
+    .package-details h5{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .package-details p i{
+        color: rgb(5, 172, 5);
+        margin-right: 10px;
+    }
+    .package-details p{
+        font-size: 14px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .payment-card a{
+        width: 80%;
+    }
+    .payment-card button{
+        height: 40px;
+        width: 100%;
+        border: hidden;
+        transition:  all 0.3s ease;
+        border-radius: 5px;
+        color: white;
+        background-color: rgb(5, 172, 5);
+        font-weight: 700;
+    }
+    .payment-card:hover{
+        cursor: pointer;
+        background-image: linear-gradient(to bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    }
+    .payment-card:hover .payment-card-plan h1{
+        color: white;
+    }
+    .payment-card:hover .payment-card-plan{
+        border-bottom-color: white;
+    }
+    .payment-card:hover .package-details p,h5{
+        color: white;
+    }
+    .payment-card:hover .payment-card-plan h3{
+        color: white;
+    }
+    .payment-card:hover button{
+        background-color: white;
+        color: rgb(5, 172, 5);
+    }
+    @media(min-width:320px) and (max-width:480px){
+        .home-section-one{
+            flex-direction: column;
+            height: 100vh;
+        }
+        .home-section-one-cnt{
+            width: 90%;
+            height: 50%;
+            justify-content: space-evenly;
+        }
+        .home-section-one-image{
+            width: 90%;
+            height: 50%;
+        }
+    }
+</style>
+<body>
+<div class="home-section-one">
+<div class="home-section-one-cnt">
+<h1><span>Account <br> Reconciliation </span> <br>Services</h1>
+<span>Streamline Your Finances with Expert Account Reconciliation Services</span>
+<a href="#free"><button>FREE CONSULTATION</button></a>
+<p class="section-main-p-2 "><a href="">Home</a><i class="fa-solid fa-angles-right"></i><a href="">Accounting</a><i class="fa-solid fa-angles-right"></i><span>Accounting Services</span><i class="fa-solid fa-angles-right"></i><span class="last-span">Account Reconciliation Services</span></p>
+</div>
+<div class="home-section-one-image">
+    <img src="https://static.vecteezy.com/system/resources/previews/027/851/280/original/young-asian-woman-professional-entrepreneur-standing-in-office-clothing-isolated-png.png">
+</div>
+</div>
+<div class="container mt-5 mb-5">
+    <div class="row gx-4">
+        <div class="col-md-5">
+    <div class="accounting-img">
+        <img src="https://assets-global.website-files.com/6411e49f90c1464b5950ab67/65030337561a87e14084e719_6500862e773b09048e0a6175_iStock-1437026399%2520(1).jpeg" alt="">
+    </div>
+        </div>
+        <div class="col-md-7">
+            <div class="best-accounting-cnt">
+    <h1 class="mb-4">Account Reconciliation <br> Services-Y&R</h1>
+   <p>Account reconciliation services involve the process of comparing two sets of records to ensure their accuracy and consistency. This typically involves comparing financial transactions in an organization's accounting records with corresponding transactions in bank statements, credit card statements, or other financial documents.</p>
+    </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container mt-5 mb-5 benefits">
+        <h1 class="mb-5">BENEFITS OF CHOOSING ACCOUNTING RECONCILIATION SERVICES</h1>
+        <p class="mb-4">Discover the transformative benefits of our accounting reconciliation services, designed to streamline your financial operations and elevate your business to new heights of efficiency and accuracy. With our expert team at your side, you can rest assured that your financial records will be meticulously reconciled, ensuring unparalleled accuracy and transparency in your financial reporting. By entrusting us with your reconciliation needs, you'll not only save valuable time and resources but also gain invaluable peace of mind knowing that your finances are in capable hands.</p>
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Accuracy Assurance</span>
+            <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample1">
+                <p>Our reconciliation services ensure that your financial records are accurate and up-to-date, reducing the risk of errors and discrepancies.</p>
+        </div>
+    </div>
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+        <span>Time Savings</span>
+        <a data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+        </div>
+        <div class="collapse mt-2 mb-3" id="collapseExample2">
+            <p> By outsourcing your reconciliation tasks to us, you can save valuable time and resources that can be redirected towards core business activities.</p>
+        </div>
+        </div>
+        <div class="benefit-points">
+            <div class="benefit-points-open">
+                <span>Financial Transparency</span>
+                <a data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+                </div>
+                <div class="collapse mt-2 mb-3" id="collapseExample3">
+                <p>Gain a clear and transparent view of your financial position with meticulously reconciled accounts, facilitating informed decision-making.</p>
+            </div>
+        </div>
+        <div class="benefit-points">
+            <div class="benefit-points-open">
+                <span>Fraud Detection</span>
+                <a data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+                </div>
+                <div class="collapse mt-2 mb-3" id="collapseExample4">
+                <p> Our reconciliation process helps identify any irregularities or inconsistencies in your financial data, aiding in the early detection of fraud or accounting discrepancies.</p>
+            </div>
+        </div>
+        <div class="benefit-points">
+            <div class="benefit-points-open">
+                <span>Compliance Confidence</span>
+                <a data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+                </div>
+                <div class="collapse mt-2 mb-3" id="collapseExample5">
+                <p>Ensure compliance with regulatory requirements and accounting standards by entrusting your reconciliation needs to our expert team.</p>
+            </div>
+        </div>
+        <div class="benefit-points">
+            <div class="benefit-points-open">
+                <span>Peace of Mind</span>
+                <a data-bs-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+                </div>
+                <div class="collapse mt-2 mb-3" id="collapseExample7">
+                <p>Rest assured knowing that your financial records are in capable hands, allowing you to focus on driving your business forward.</p>
+            </div>
+        </div>  
+        <div class="benefit-points">
+            <div class="benefit-points-open">
+                <span>Customized Solutions</span>
+                <a data-bs-toggle="collapse" href="#collapseExample8" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+                </div>
+                <div class="collapse mt-2 mb-3" id="collapseExample8">
+                <p>We tailor our reconciliation services to meet the unique needs and requirements of your business, ensuring a personalized approach to your financial management</p>
+            </div>
+        </div>
+        <div class="benefit-points">
+            <div class="benefit-points-open">
+                <span>Cost-Effective</span>
+                <a data-bs-toggle="collapse" href="#collapseExample9" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+                </div>
+                <div class="collapse mt-2 mb-3" id="collapseExample9">
+                <p> Outsourcing your reconciliation tasks can be a cost-effective solution compared to hiring in-house staff or investing in expensive software.</p>
+            </div>
+        </div>  
+        <div class="benefit-points">
+            <div class="benefit-points-open">
+                <span>Professional Expertise</span>
+                <a data-bs-toggle="collapse" href="#collapseExample10" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+                </div>
+                <div class="collapse mt-2 mb-3" id="collapseExample10">
+                <p>Benefit from the expertise of our skilled professionals who bring years of experience in financial management and reconciliation practices.</p>
+            </div>
+        </div>
+            
+    </div>
+
+<div class="container mb-5 services">
+    <h1 class="mb-4">SERVICES WE PROVIDE</h1>
+    <p><i class="fa-solid fa-arrow-right-long"></i>Match and reconcile business records with bank statements</p>
+    <p><i class="fa-solid fa-arrow-right-long"></i>Reconciliation of credit card payments</p>
+    <p><i class="fa-solid fa-arrow-right-long"></i>Reconciliation of accounts like debtors / creditors accounts</p>
+    <p><i class="fa-solid fa-arrow-right-long"></i>Match all the invoices direct from bank and recorded in company’s books of accounts.</p>
+    <p><i class="fa-solid fa-arrow-right-long"></i>Identify unauthorized transactions</p>
+</div>
+
+<div class="container why-choose-us">
+    <h1 class="mb-4">Why CHOOSE US ?</h1>
+    <p class="mb-4">We keep up the standard in hiring highly qualified professional accountants with hands-on experience in offering reconciliation services. We offer continuous training with updated trends and rules in the field.</p>
+    <div class="d-flex flex-column">
+<h5><i class="fa-solid fa-circle-arrow-right"></i>Tailored Solutions</h5>
+<p class=""> We understand that every business is unique. That's why we offer customized reconciliation solutions tailored to meet your specific needs and requirements. Our approach ensures that you receive the most effective and efficient service possible.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Comprehensive Approach</h5>
+        <p> Our reconciliation services go beyond just balancing accounts. We take a holistic approach, ensuring compliance with regulatory standards, detecting and preventing fraud, and providing insights to enhance your financial decision-making.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Efficiency and Time Savings</h5>
+        <p> By outsourcing your reconciliation tasks to us, you free up valuable time and resources that can be better utilized elsewhere in your business. Our efficient processes and dedicated team ensure prompt and accurate reconciliation, allowing you to focus on what matters most.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Transparent Communication</h5>
+        <p> We believe in open and transparent communication with our clients. You'll always be kept informed about the status of your reconciliation process, with clear explanations of any discrepancies or issues that arise.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Peace of Mind</h5>
+        <p> With our reliable and trustworthy reconciliation services, you can have peace of mind knowing that your financial records are in good hands. You can rely on us to maintain the integrity and accuracy of your financial data, allowing you to focus on growing your business.</p>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5 processes">
+    <h1 class="text-center mb-3">Who can benefit from account reconciliation services?</h1>
+    <p class="text-center mb-4">Industries that manage accounting, trading, transactional and reconciliation <br> activities get immense benefits from our account reconciliation services.</p>
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+      <div class="col-md-3 col-6">
+        <div class="p-2 process-card">
+<img src="img/cutlery.png" alt="">
+<span>Food & Beverage</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="p-2 process-card">
+            <img src="img/passenger.png" alt="">
+            <span>Travel and leisure</span>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-2 process-card">
+            <img src="img/diagram.png" alt="">
+            <span>Business Consultancy</span>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-2 process-card">
+            <img src="img/shopping-bag.png" alt="">
+            <span>E commerce </span>
+         </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-2 process-card">
+            <img src="img/family.png" alt="">
+            <span>Insurance</span>
+         </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-2 process-card">
+            <img src="img/health-insurance.png" alt="">
+            <span>Healthcare</span>
+         </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-2 process-card">
+            <img src="img/finance.png" alt="">
+            <span>Finance</span>
+         </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-2 process-card">
+            <img src="img/retailer.png" alt="">
+            <span>Wholesale & Retail</span>
+         </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-2 process-card">
+            <img src="img/bank-building.png" alt="">
+            <span>Banking</span>
+         </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-2 process-card">
+            <img src="img/money.png" alt="">
+            <span>Investments</span>
+         </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-2 process-card">
+            <img src="img/developer.png" alt="">
+            <span>Realestate</span>
+         </div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-2 process-card">
+            <img src="img/teamwork.png" alt="">
+            <span>Non-profit Organizations</span>
+         </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"  crossorigin="anonymous" ></script>
+</body>
+</html>

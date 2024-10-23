@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate service</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+      .home-section-one{
+        height: 80vh;
+        /*background-image: url("{% static '/img/web-bg.jpg' %}");*/
+        /*background-size: cover;*/
+        background-color:#062F60;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .home-section-one-image{
+        width: 50%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content:center;
+    }
+    .home-section-one-image img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+    }
+    .home-section-one-cnt{
+        width: 45%;
+        display: flex;
+        height: 80%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .home-section-one-cnt h1{
+        font-weight: 500;
+        color:white;
+        letter-spacing: 1px;
+    }
+    .home-section-one-cnt h1 span{
+        font-weight: bold;
+    }
+    .home-section-one-cnt span{
+        color: white;
+    }
+    .home-section-one-cnt button{
+        background-color: white;
+        color: #062F60;
+        border-radius: 5px;
+        border: hidden;
+        font-size: 14px;
+        font-weight:650;
+        width: 180px;
+        height: 40px;
+
+    }
+    .section-main-p-2{
+        color:white;
+        font-weight:650;
+    }
+    .section-main-p-2 .last-span{
+        color:aquamarine;
+    }
+    .section-main-p-2 i{
+        margin-right:5px;
+        margin-left:5px;
+        color: aquamarine;
+    }
+    .section-main-p-2 a{
+        text-decoration: none;
+        color: white;
+    }
+    .best-accounting-cnt h1{
+        font-weight: 700;
+        color: #062F60;
+    }
+    .best-accounting-cnt p i{
+        margin-right: 10px;
+        color: green;
+    }
+    .accounting-img{
+        width: 100%;
+        height: 50vh;
+    }
+    .accounting-img img{
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+    }
+    .services h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .services p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .why-choose-us h5{
+        font-weight: 650;
+        margin-bottom: 20px;
+        color: black;
+    }
+    .why-choose-us p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us p{
+        margin-bottom: 30px;
+    }
+    .benefit-points{
+        height: auto;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .benefit-points-open{
+        height: auto;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .collapse{
+        width: 100%;
+    }
+    .benefits h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .benefit-points span{
+        font-weight: 700;
+        font-size: 18px;
+        opacity: 0.8;
+        letter-spacing: 1px;
+    }
+    .benefit-points i{
+        font-size: 22px;
+        color: rgb(5, 172, 5);
+    }
+    .processes h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .process-card{
+        width: 80%;
+        margin: auto;
+        height: 180px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    .process-card img{
+        width: 50px;
+        height: 50px;
+    }
+  
+    .how-we h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .how-we p i{
+        color: rgb(5, 172, 5);
+        margin-right: 10px;
+
+    }
+    .tax h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .tax p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .scenario h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .scenario p{
+        font-size: 20px;
+        font-weight: 650;
+    }
+    .scenario p img{
+        margin-right: 10px;
+        width: 25px;
+        height: 25px;
+    }
+    @media(min-width:320px) and (max-width:480px){
+        .home-section-one{
+            flex-direction: column;
+            height: 100vh;
+        }
+        .home-section-one-cnt{
+            width: 90%;
+            height: 50%;
+            justify-content: space-evenly;
+        }
+        .home-section-one-image{
+            width: 90%;
+            height: 50%;
+        }
+    }
+</style>
+<body>
+<div class="home-section-one">
+<div class="home-section-one-cnt">
+<h1>CORPORATE TAX REGISTRATION</h1>
+<span>Corporate Tax Registration In Dubai That Are Impeccable To Ensure</span>
+<a href="#free"><button>FREE CONSULTATION</button></a>
+<p class="section-main-p-2 "><a href="">Home</a><i class="fa-solid fa-angles-right"></i><a href="">Advisory&Consulting</a><i class="fa-solid fa-angles-right"></i><span class="last-span">Corporate Tax Registration</span></p>
+</div>
+<div class="home-section-one-image">
+    <img src="img/advisory.png">
+</div>
+</div>
+<div class="container mt-5 mb-5">
+    <div class="row gx-4">
+        <div class="col-md-7">
+            <div class="best-accounting-cnt">
+    <p>Y&R offers top-notch corporate tax services, ensuring a professional and timely corporate tax registration in the UAE to adhere to the new UAE CT regulations. Understanding corporate tax law and its registration processes is crucial for any business in the UAE. Therefore, here is a comprehensive guide.</p>
+   <p>The Ministry of Finance in the UAE introduced Corporate Tax in 2022, scheduled for full implementation by June 2023, affecting the financial years of companies and businesses. Consequently, audit firms in Dubai and tax consultants in the UAE are providing Corporate Tax Advisory and Implementation Services to businesses. The UAE's Corporate Tax system aligns closely with global best practices and OECD regulations to reduce compliance risks for businesses.</p>
+    </div>
+        </div>
+        <div class="col-md-5">
+            <div class="accounting-img">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2022/5/CT/JT/VE/40513855/income-tax-registration-service-500x500.jpg" alt="">
+            </div>
+                </div>
+    </div>
+    </div>
+
+    <div class="container mt-5 mb-5 tax">
+        <h1 class="mb-3">Registration Process for Corporate Tax in the UAE</h1>
+        <p class="mb-4">In accordance with Federal Decree Law 47 issued by the FTA, all taxable individuals, including Free Zone Persons, are required to register for Corporate Tax and obtain a unique Registration Number. Even those classified as Exempted Persons are urged by the Federal Tax Authority to register for Corporate Tax.</p>
+        <p><i class="fa-solid fa-hand-point-right"></i>Taxable Persons need to submit Corporate Tax returns within 9 months after the end of a specific period. This deadline typically coincides with the payment of all Corporate Taxes owed for that Tax Period.</p>
+        <p><i class="fa-solid fa-hand-point-right"></i>In cases specified as exempted by the Minister, Taxable Persons must register for Corporate Tax with the Federal Tax Authority within a timeline set by the authority.</p>
+        <p><i class="fa-solid fa-hand-point-right"></i>The Federal Tax Authority mandates that Taxable Persons or Independent Partnerships register for Corporate Tax and acquire a Tax Registration Number promptly upon meeting the criteria for being a Taxable Person.</p>
+        <p>Upon successful corporate tax registration, individuals are subject to a standard rate of Corporate Tax of 9% on taxable income exceeding AED 375,000, with no tax applied on income up to AED 375,000.</p>
+    </div>
+
+    <div class="container mt-5 mb-5 tax">
+        <h1 class="mb-3">How to Register for UAE Corporate Tax:</h1>
+        <p class="">The Federal Tax Authority has introduced pre-registration for corporate tax via the EmaraTax platform, an online portal that streamlines tax-related processes such as registrations, returns, refunds, deregistrations, and payments. The user-friendly EmaraTax portal also facilitates easy VAT payments for taxpayers.</p>
+    </div>
+
+<div class="container mb-5 services">
+    <h1 class="mb-4">Corporate Tax Registration Requirements in the UAE</h1>
+    <p class="mb-4">The UAE Government and the Ministry of Finance have established tax regulations and laws that could be advantageous for companies subject to corporate tax. If your business falls under corporate tax, here are the benefits:</p>
+    <p><i class="fa-solid fa-thumbtack"></i>Ensuring compliance with tax laws and staying updated on changes</p>
+    <p><i class="fa-solid fa-thumbtack"></i>Detecting any fraudulent tax activities</p>
+    <p><i class="fa-solid fa-thumbtack"></i>Adhering to top-tier tax standards</p>
+    <p>Corporate tax registration is crucial for reducing post-tax profits for companies, thus benefiting shareholders. This affects not only individuals with direct shares but also indirect shareholders through private pensions or investment funds.</p>
+    <p>Paying corporate tax offers more benefits to business owners than paying additional income tax individually. </p>
+    <p>Exemptions from UAE Corporate Tax</p>  
+       <p> While the Federal Tax Authority requires Exempted Persons to register for corporate tax, exempted businesses are not liable to pay corporate tax at a rate of 0%.
+        </p>
+</div>
+
+<div class="container why-choose-us">
+    <h1 class="mb-4">Certain categories are exempt from Corporate Tax. Some exemptions include:</h1>
+    <div class="d-flex flex-column">
+<p><i class="fa-solid fa-circle-arrow-right"></i>Employee salaries are not impacted by Corporate Tax. However, individuals earning income from freelancing activities are subject to company tax</p>
+    </div>
+    <div class="d-flex flex-column">
+        <p><i class="fa-solid fa-circle-arrow-right"></i>Corporate Tax does not apply to dividends, capital gains, or other income from personal investments</p>
+    </div>
+    <div class="d-flex flex-column">
+        <p><i class="fa-solid fa-circle-arrow-right"></i>Real estate investments are exempt if the investor does not hold a business license</p>
+    </div>
+    <div class="d-flex flex-column">
+        <p><i class="fa-solid fa-circle-arrow-right"></i>Intra-group transactions or reorganizations are not affected by Corporate Tax</p>
+    </div>
+    <div class="d-flex flex-column">
+        <p><i class="fa-solid fa-circle-arrow-right"></i>Foreign investors are not taxed on income from dividends, gains, royalties, and similar investment returns unless derived from business activities</p>
+    </div>
+</div>
+
+<div class="container who-needs">
+    <p>If you own a business in the UAE, check if your entity is exempt from corporate tax.</p>
+    <p><i>Who Needs to Register for Corporate Tax?</i></p>
+    <p>Every taxable entity, including those in Free Zones, must register for Corporate Tax and obtain a Registration Number</p>
+</div>
+
+<div class="container scenario mb-5 mt-5">
+    <h1 class="mb-4">According to UAE Corporate Tax laws, there are two registration scenarios:</h1>
+    <p><img src="img/registration.png" alt="">Mandatory Registration</p>
+    <p><img src="img/registration.png" alt="">Voluntary Registration</p>
+</div>
+
+<div class="container mb-5 how-we">
+    <h1 class="mb-4">corporate tax advisory in uae:</h1>
+    <p>Businesses subject to Corporate Tax policy must apply for registration. Once registered, a Tax Registration Number must be obtained within a specified timeframe. Tax experts at Y&R assist with Corporate Tax registration processes.</p>
+    <p>The Federal Tax Authority mandates that certain entities, like Exempt Persons and autonomous partnerships, register under the Corporate Tax policy and obtain a Tax Registration Number.</p>
+    <p><b>Timeline for Corporate Tax Registration :</b> Corporate Tax registration will commence in early 2023. For instance, a business with a tax period starting in June 2023 must register by January 2023, with a tax return filing deadline of February 2025. Following registration, businesses have up to nine months after the relevant tax period to submit their tax returns to the Federal Tax Authority and settle Corporate Tax payments.</p>
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"  crossorigin="anonymous" ></script>
+</body>
+</html>

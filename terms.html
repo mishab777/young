@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+      .home-section-one{
+        height: 80vh;
+        /*background-image: url("{% static '/img/web-bg.jpg' %}");*/
+        /*background-size: cover;*/
+        background-color:#062F60;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .home-section-one-image{
+        width: 50%;
+        display: flex;
+        height: 100%;
+        align-items: flex-end;
+        justify-content:center;
+    }
+    .home-section-one-image img{
+        width:100%;
+        height:90%;
+        object-fit:cover;
+    }
+    .home-section-one-cnt{
+        width: 45%;
+        display: flex;
+        height: 70%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .home-section-one-cnt h1{
+        font-weight: 700;
+        color:white;
+        letter-spacing: 1px;
+    }
+    .home-section-one-cnt h1 span{
+        font-weight: bold;
+    }
+    .home-section-one-cnt span{
+        color: white;
+    }
+    .home-section-one-cnt button{
+        background-color: white;
+        color: #062F60;
+        border-radius: 5px;
+        border: hidden;
+        font-size: 14px;
+        font-weight:650;
+        width: 180px;
+        height: 40px;
+
+    }
+    .section-main-p-2{
+        color:white;
+        font-weight:650;
+    }
+    .section-main-p-2 .last-span{
+        color:aquamarine;
+    }
+    .section-main-p-2 i{
+        margin-right:5px;
+        margin-left:5px;
+        color: aquamarine;
+    }
+    .section-main-p-2 a{
+        text-decoration: none;
+        color: white;
+    }
+    .best-accounting-cnt h1{
+        font-weight: 700;
+        color: #062F60;
+    }
+    .best-accounting-cnt p i{
+        margin-right: 10px;
+        color: green;
+    }
+    .accounting-img{
+        width: 100%;
+        height: 50vh;
+    }
+    .accounting-img img{
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+    }
+    .services h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .services p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .why-choose-us h5{
+        font-weight: 650;
+        margin-bottom: 20px;
+        color: black;
+    }
+    .why-choose-us p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us p{
+        margin-bottom: 30px;
+    }
+    .benefit-points{
+        height: auto;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .benefit-points-open{
+        height: auto;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .collapse{
+        width: 100%;
+    }
+    .benefits h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .benefit-points span{
+        font-weight: 700;
+        font-size: 18px;
+        opacity: 0.8;
+        letter-spacing: 1px;
+    }
+    .benefit-points i{
+        font-size: 22px;
+        color: rgb(5, 172, 5);
+    }
+    .processes h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .process-card{
+        width: 80%;
+        margin: auto;
+        height: 180px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    .process-card img{
+        width: 50px;
+        height: 50px;
+    }
+  
+    .how-we h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .how-we p i{
+        color: rgb(5, 172, 5);
+        margin-right: 10px;
+
+    }
+    .tax h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .tax p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .scenario h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .scenario p{
+        font-size: 20px;
+        font-weight: 650;
+    }
+    .scenario p img{
+        margin-right: 10px;
+        width: 25px;
+        height: 25px;
+    }
+    .points p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .aspects h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .aspects-card{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        height: 150px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        justify-content: space-evenly;
+    }
+    .aspects-card h3{
+        font-size: 20px;
+        text-align: center;
+    }
+    .aspects-card p{
+        text-align: center;
+    }
+    .privacy-points h1{
+        font-size: 25px;
+        color: #062F60;
+        font-weight: 700;
+    }
+    
+
+    @media(min-width:320px) and (max-width:480px){
+        .home-section-one{
+            flex-direction: column;
+            height: 100vh;
+        }
+        .home-section-one-cnt{
+            width: 90%;
+            height: 50%;
+            justify-content: space-evenly;
+        }
+        .home-section-one-image{
+            width: 90%;
+            height: 50%;
+        }
+    }
+</style>
+<body>
+<div class="home-section-one">
+<div class="home-section-one-cnt">
+<h1>Terms and <br> Conditions of Use</h1>
+<span>Please read these terms and conditions carefully before using Our Service.</span>
+<a href="#free"><button>FREE CONSULTATION</button></a>
+<p class="section-main-p-2 "><a href="">Home</a><i class="fa-solid fa-angles-right"></i><span class="last-span">Terms & Conditions</span></p>
+</div>
+<div class="home-section-one-image">
+    <img src="img/t&c.png">
+</div>
+</div>
+
+
+<div class="container mt-5 why-choose-us">
+    <h1 class="mb-4">Terms & Conditions For Young & Right LLC</h1>
+    <p>Welcome to the Young and Right website. These Terms & Conditions govern your use of our website and services. By accessing or using our website, you agree to comply with these Terms & Conditions. If you do not agree with any part of these terms, please do not use our website.</p>
+        
+</div>
+<div class="container mb-4 privacy-points">
+<h1 class="mb-3">Use of Website</h1>
+<p>You may use the Young and Right website for lawful purposes only. You agree not to:</p>
+<p>1. Violate any applicable laws, regulations, or third-party rights</p>
+<p>2. Engage in any activity that could harm, disrupt, or interfere with our website or services</p>
+<p>3. Use our website to transmit spam, malware, or other harmful content</p>
+<p>4. Attempt to gain unauthorized access to any part of our website or services</p>
+</div>
+<div class="container mb-4 privacy-points">
+    <h1 class="mb-3">Intellectual Property</h1>
+    <p>The content, design, and layout of the Young and Right website are protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, modify, or create derivative works based on any part of our website without our prior written consent</p>
+</div>
+<div class="container mb-3 privacy-points">
+    <h1 class="mb-3">Disclaimer of Warranties</h1>
+    <p>The information and materials provided on the Young and Right website are for general informational purposes only. We make no representations or warranties of any kind, express or implied, about the accuracy, reliability, completeness, or suitability of the information contained on our website.</p>
+</div>
+<div class="container privacy-points">
+    <h1 class="mb-3">Limitation of Liability</h1>
+    <p>To the fullest extent permitted by law, Young and Right and its affiliates, officers, directors, employees, and agents shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of or in connection with your use of our website or services.</p>
+</div>
+<div class="container mb-3 privacy-points">
+    <h1 class="mb-3">Indemnification</h1>
+    <p>You agree to indemnify and hold Young and Right and its affiliates, officers, directors, employees, and agents harmless from any claims, liabilities, damages, losses, or expenses, including reasonable attorneys' fees, arising out of or in connection with your use of our website or services or your violation of these Terms & Conditions.</p>
+</div>
+<div class="container mb-3 privacy-points">
+    <h1 class="mb-3">Children's Privacy </h1>
+    <p>Our website is not intended for children under the age of 13, and we do not knowingly collect personal information from children. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us so that we can delete the information.</p>
+</div>
+<div class="container mb-3 privacy-points">
+    <h1 class="mb-3">Changes to Terms</h1>
+    <p>Young and Right reserves the right to update or modify these Terms & Conditions at any time. Any changes will be effective immediately upon posting the revised terms on our website. Your continued use of our website after the posting of any changes constitutes acceptance of those changes.</p>
+</div>
+<div class="container mb-3 privacy-points">
+    <h1 class="mb-3">Contact Us</h1>
+<p>If you have any questions or concerns about these Terms & Conditions, please contact us at <b>info@youngandright.ae</b></p>
+<p>Thank you for reviewing our Terms & Conditions. We appreciate your compliance and hope you enjoy your experience on the Young and Right website.</p>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"  crossorigin="anonymous" ></script>
+</body>
+</html>

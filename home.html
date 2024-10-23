@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .home-section-one {
+        height: 80vh;
+        background-image: url(/img/web-bg.jpg);
+        background-size: cover;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .home-section-one-cnt {
+        width: 40%;
+        display: flex;
+        height: 60%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    .home-section-one-cnt h1 {
+        font-weight: 700;
+        color: #062F60;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        letter-spacing: 2px;
+    }
+
+    .home-section-one-cnt span {
+        color: #062F60;
+    }
+
+    .home-section-one-cnt button {
+        background-color: #062F60;
+        color: white;
+        border-radius: 5px;
+        border: hidden;
+        font-size: 14px;
+        width: 180px;
+        height: 40px;
+
+    }
+
+    .home-section-two-text {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .home-section-two-text h1 {
+        color: #062F60;
+    }
+
+    .home-section-two-cnt {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-end;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .home-section-two-cnt h1 {
+        font-size: 100px;
+        font-weight: 700;
+        color: #062F60;
+    }
+
+    .home-section-two-cnt h3 {
+        font-weight: 800;
+        color: #062F60;
+        font-size: 40px;
+    }
+
+    .home-section-two-cnt-cards {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .counts-card {
+        width: 160px;
+        border-radius: 10px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    }
+
+    .counts-card h1 {
+        font-size: 25px;
+        color: black;
+        margin-top: 20px;
+    }
+
+    .counts-card span {
+        color: black;
+    }
+
+    .counts-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .services-card {
+        width: 100%;
+        height: 350px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5%;
+        justify-content: space-evenly;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .services-card:hover .read-more-btn a {
+        color: rgb(36, 125, 95);
+    }
+
+    .services-card:hover .read-more-btn i {
+        color: rgb(36, 125, 95);
+    }
+
+    .services-card-text {
+        display: flex;
+        width: 90%;
+        height: 70%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    .read-more-btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .read-more-btn a {
+        text-decoration: none;
+        color: gray;
+    }
+
+    .read-more-btn i {
+        color: gray;
+    }
+
+    .services-card:hover {
+        transform: translateY(-20px);
+    }
+
+    .background-section-three {
+        background-color: #062F60;
+        width: 100%;
+        height: auto;
+    }
+
+    .background-section-three h1 {
+        color: white;
+    }
+
+    .background-section-three-p {
+        color: white;
+        font-size: 18px;
+        width: 70%;
+        margin: auto;
+    }
+
+    .services-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .services-card p {
+        color: gray;
+    }
+
+    .services-card h3 {
+        font-size: 24px;
+        color: #062F60;
+    }
+
+    .who-we-are-img {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .who-we-are-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .read-more-button {
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+        background-color: #062F60;
+        color: white;
+        border: hidden;
+        border-radius: 10px;
+    }
+
+    .read-more-button i {
+        margin-left: 10px;
+    }
+
+    .who-we-are-content {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    .who-we-are-content h1 {
+        font-weight: 700;
+    }
+
+    .who-we-are-content h1 span {
+        color: #062F60;
+    }
+
+    .background-section-four {
+        height: auto;
+        background-color: #e6f7ff;
+        width: 100%;
+    }
+
+    .background-section-four-p {
+        width: 60%;
+        text-align: center;
+        margin: auto;
+        font-size: 18px;
+    }
+
+    .background-section-four h1 {
+        font-size: 30px;
+        font-weight: 700;
+        color: #062F60;
+    }
+    .payment-package{
+        height: auto;
+        width: 100%;
+        background-color: #e6f7ff;
+    }
+    .payment-card{
+        width: 100%;
+        height: auto;
+        display: flex;
+        padding-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        background-color: white;
+        justify-content: space-evenly;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    }
+    .payment-card-plan{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding:30px;
+        border-bottom-style: dashed;
+border-bottom-color: rgb(158, 157, 157);
+border-bottom-width: 1px;
+    }
+    .payment-header{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .payment-card-plan h1{
+        text-align: center;
+        color: rgb(5, 172, 5);
+        font-size: 35px;
+        font-weight: 400;
+    }
+    .payment-card-plan h1 span{
+        font-weight: 800;
+    }
+    .payment-card-plan h3{
+        font-size: 20px;
+        font-weight: 650;
+    }
+    .package-details{
+        width: 90%;
+        padding: 10px;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-direction: column;
+        display: flex;
+    }
+    .package-details h5{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .package-details p i{
+        color: rgb(5, 172, 5);
+        margin-right: 10px;
+    }
+    .package-details p{
+        font-size: 14px;
+    }
+    .payment-card a{
+        width: 80%;
+    }
+    .payment-card button{
+        height: 40px;
+        width: 100%;
+        border: hidden;
+        transition:  all 0.3s ease;
+        border-radius: 5px;
+        color: white;
+        background-color: rgb(5, 172, 5);
+        font-weight: 700;
+    }
+    .payment-card:hover{
+        cursor: pointer;
+        background-image: linear-gradient(to bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    }
+    .payment-card:hover .payment-card-plan h1{
+        color: white;
+    }
+    .payment-card:hover .payment-card-plan{
+        border-bottom-color: white;
+    }
+    .payment-card:hover .package-details p,h5{
+        color: white;
+    }
+    .payment-card:hover .payment-card-plan h3{
+        color: white;
+    }
+    .payment-card:hover button{
+        background-color: white;
+        color: rgb(5, 172, 5);
+    }
+    .contribution-card {
+        width: 100%;
+        height: 320px;
+        border-radius: 10px;
+        background-color: white;
+        padding: 6%;
+        display: flex;
+        align-items: flex-start;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: all 0.3s ease;
+    }
+
+    .contribution-card:hover {
+        box-shadow: 0 0 0 0;
+        border: 2px solid #062F60;
+    }
+
+    .contribution-card span {
+        font-size: 30px;
+        font-weight: 800;
+        color: rgb(188, 188, 188);
+    }
+
+    .contribution-card h3 {
+        font-size: 25px;
+        font-weight: 650;
+        color: #062F60;
+    }
+
+    .contribution-card p {
+        font-size: 14px;
+    }
+
+    .background-section-five {
+        background-image: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url(img/dubai-bg.jpg);
+        background-attachment: fixed;
+        height: 150vh;
+        width: 100%;
+        background-size: cover;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        display: flex;
+    }
+
+    .why-choose-us {
+        width: 50%;
+        height: 200px;
+        padding-left: 4%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        background-color: white;
+        clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+    }
+
+    .why-choose-us h1 {
+        font-size: 35px;
+        font-weight: 700;
+        color: #062F60;
+    }
+
+    .why-choose-us h1 span {
+        color: gray;
+    }
+
+    .why-choose-us h5 {
+        color: gray;
+    }
+
+    .why-choose-card {
+        height: 300px;
+        width: 100%;
+        border: 2px solid white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(rgba(152, 152, 152, 0.4), rgba(23, 69, 122, 0.4));
+        align-items: flex-start;
+        padding: 5%;
+        justify-content: space-evenly;
+    }
+
+    .why-choose-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .why-choose-card h1 {
+        font-size: 22px;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .why-choose-card p {
+        color: white;
+    }
+
+    .free-consultation {
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        background-size: cover;
+        background-image: linear-gradient(rgba(29, 54, 119, 0.6), rgba(29, 54, 119, 0.6)), url(img/free-cunsultation-bg.jpg);
+    }
+
+    .free-consultation-head {
+        width: 45%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    .free-consultation-form {
+        height: 60%;
+        width: 45%;
+
+    }
+
+    .free-consultation-form form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    .accordion-button {
+        color: #062F60;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .free-consultation-head h1 {
+        color: white;
+        font-size: 45px;
+        font-weight: 700;
+    }
+
+    .free-consultation-head h1 span {
+        color: yellow;
+    }
+
+    .free-consultation-head p {
+        color: white;
+        font-size: 20px;
+    }
+
+    .free-consultation-form form input {
+        width: 100%;
+        background-color: white;
+        font-size: 15px;
+        border: hidden;
+        outline: none;
+        height: 40px;
+        padding-left: 10px;
+        border-radius: 5px;
+    }
+
+    .free-consultation-form form button {
+        background-color: yellow;
+        color: black;
+        width: 200px;
+        height: 40px;
+        border: hidden;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .navbar-section-mobile {
+        display: none;
+    }
+
+    .background-section-news {
+        height: auto;
+        background-color: #e6f7ff;
+        width: 100%;
+    }
+
+    .background-section-news h1 {
+        color: #062F60;
+        font-weight: 700;
+    }
+
+    .background-section-news p {
+        font-size: 20px;
+    }
+
+    .blog-card {
+        width: 100%;
+        height: 400px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: white;
+        transition: all 0.4s ease;
+    }
+
+    .blog-card:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        transform: translateY(-20px);
+
+    }
+
+    .blog-card-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .blog-card-content {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        padding: 6%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    .blog-card-content-base {
+        width: 100%;
+        display: flex;
+        height: 40px;
+        border-top: 1px solid rgb(216, 216, 216);
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .blog-card-content-base span {
+        font-size: 14px;
+        color: gray;
+    }
+
+    .blog-card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .blog-card-content h1 {
+        font-size: 17px;
+        font-weight: 500;
+    }
+
+    .blog-card-content p {
+        font-size: 14px;
+        color: gray;
+    }
+
+    .blog-card-content-base i {
+        color: gray;
+    }
+
+    .footer-section {
+        height: 70vh;
+        background-image: url(https://gradzivinice.ba/wp-content/uploads/2017/07/footer-background.png);
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .footer-section-one {
+        display: flex;
+        height: 60vh;
+        width: 100%;
+        padding: 5%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .footer-section-base {
+        width: 100%;
+        height: 80px;
+        padding-left: 5%;
+        padding-right: 5%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid rgb(181, 181, 181);
+    }
+
+    .footer-section-links {
+        width: 15%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .footer-section-links h1 {
+        font-size: 20px;
+        color: white;
+    }
+
+    .footer-section-links a {
+        text-decoration: none;
+        color: white;
+        font-weight: 300;
+    }
+
+    .footer-section-address {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-section-address h1 {
+        color: white;
+        font-size: 30px;
+    }
+
+    .footer-section-address p {
+        color: white;
+    }
+
+    .footer-section-base span {
+        color: white;
+    }
+
+    .footer-section-base-links {
+        width: auto;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-section-base-links i {
+        color: white;
+        margin-right: 20px;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        align-items: center;
+        transition: all 0.5s ease;
+        justify-content: center;
+        border: 1px solid rgb(212, 212, 212);
+    }
+
+    .footer-section-base-links i:hover {
+        background-color: white;
+        color: #062F60;
+    }
+
+    .footer-section-base-links a {
+        text-decoration: none;
+    }
+
+    .fixed-social-medias {
+        position: fixed;
+        display: flex;
+        right: 10px;
+        bottom: 10px;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+        height: 60px;
+        width: 60px;
+        z-index: 3;
+    }
+
+    .popup {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        z-index: 1;
+        right: 50px;
+        bottom: 50px;
+        width: 400px;
+        height: 500px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .chat-open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        border-radius: 50%;
+        height: 60px;
+        background-color: #062F60;
+    }
+
+    #whatsapp-icon {
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .chat-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .chat-header {
+        height: 60px;
+        background-color: #062F60;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .chat-header h1 {
+        color: white;
+        font-size: 20px;
+    }
+
+    .chat-input {
+        height: 60px;
+        width: 90%;
+        border-top: 1px solid rgb(231, 231, 231);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .chat-input textarea {
+        border: hidden;
+        outline: none;
+        resize: none;
+        /* Prevent textarea resizing */
+        overflow: hidden;
+        font-size: 12px;
+        height: 40px;
+        /* Adjust height to match input type text */
+        width: calc(100% - 40px);
+        /* Adjust width to match input type text and button */
+    }
+
+    .chat-input button {
+        border: hidden;
+        outline: none;
+        background: transparent;
+    }
+
+    .chat-input button img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .chat-messages {
+        height: auto;
+        overflow-y: auto;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .main-text-area {
+        height: 100%;
+        overflow-y: scroll;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .main-text-area::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .main-text-area::-webkit-scrollbar-thumb {
+        background-color: #062F60;
+        border-radius: 5px;
+    }
+
+    .main-text-area::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+    }
+
+    .time-stamp {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 19px;
+        font-size: 12px;
+        font-weight: normal;
+        color: #7C7C7C;
+    }
+
+    .message {
+        position: relative;
+        display: block;
+        height: 54px;
+        width: 75%;
+        font-size: 17px;
+        font-weight: 400;
+        border-radius: 20px;
+    }
+
+    .message.from {
+        color: white;
+        background-color: #062F60;
+        margin-left: 26px;
+        margin-bottom: 10px;
+        border: hidden;
+        padding: 10px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .message.to {
+        background-color: white;
+        margin-right: 26px;
+        float: right;
+        margin-bottom: 10px;
+        border: 1px solid transparent;
+        font-size: 14px;
+        height: auto;
+        padding: 10px;
+        color: #062F60;
+        /* Change text color */
+        border-color: #062F60;
+        /* Change border color */
+    }
+
+    .message.user {
+        background-color: white;
+        margin-right: 26px;
+        float: right;
+        margin-bottom: 10px;
+        border: 1px solid transparent;
+        font-size: 14px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        color: #062F60;
+        /* Change text color */
+        border-color: #062F60;
+        /* Change border color */
+    }
+
+    .message p {
+        text-align: right;
+        padding-top: 14px;
+        padding-left: 20px;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .message:after {
+        position: absolute;
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        content: "";
+        margin-top: -9px;
+    }
+
+    .delivered {
+        float: right;
+        display: block;
+        clear: both;
+        color: #d3d3d3;
+        font-weight: 400;
+        margin-right: 26px;
+        margin-top: 9px;
+        font-size: 14px;
+    }
+    .accordion {
+    display: flex;
+    flex-direction: column;
+    font-family: "Sora", sans-serif;
+    max-width: 100%;
+    min-width: 320px;
+    margin: 50px auto;
+    padding: 0 50px;
+}
+.accordion h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #C48253;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.accordion label{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.accordion-item {
+    margin-top: 16px;
+    border: 1px solid #fcfcfc;
+    border-radius: 6px;
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+.accordion-item .accordion-item-title {
+    position: relative;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    font-size: 15px;
+    cursor: pointer;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 14px 20px;
+    box-sizing: border-box;
+    align-items: center;
+}
+.accordion-item .accordion-item-desc {
+    display: none;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    color: #444;
+    border-top: 1px dashed #ddd;
+    padding: 10px 20px 20px;
+    box-sizing: border-box;
+}
+.accordion-item input[type="checkbox"] {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+.accordion-item input[type="checkbox"]:checked ~ .accordion-item-desc {
+    display: block;
+}
+.accordion-item
+    input[type="checkbox"]:checked
+    ~ .accordion-item-title
+    .icon:after {
+    content: "-";
+    font-size: 20px;
+}
+.accordion-item input[type="checkbox"] ~ .accordion-item-title .icon:after {
+    content: "+";
+    font-size: 20px;
+}
+.accordion-item:first-child {
+    margin-top: 0;
+}
+.accordion-item .icon {
+    margin-left: 14px;
+}
+    @media(min-width:320px) and (max-width:480px) {
+        .who-we-are-content {
+            height: auto;
+        }
+
+        .navbar-section-one {
+            display: none;
+        }
+
+        .navbar-section-two {
+            display: none;
+        }
+
+        .who-we-are-img {
+            height: 60vh;
+        }
+
+        .background-section-five {
+            height: auto;
+            padding-bottom: 4%;
+        }
+
+        .why-choose-us {
+            width: 100%;
+            height: 150px;
+        }
+
+        .why-choose-us h1 {
+            font-size: 25px;
+        }
+
+        .home-section-one {
+            align-items: center;
+            justify-content: center;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/web-bg.jpg);
+        }
+
+        .home-section-one-cnt {
+            width: 80%;
+            height: 45%;
+        }
+
+        .home-section-one-cnt span {
+            color: white;
+        }
+
+        .home-section-one-cnt h1 {
+            color: white;
+        }
+
+        .free-consultation {
+            height: 80vh;
+            flex-direction: column;
+        }
+
+        .free-consultation-head {
+            width: 90%;
+        }
+
+        .free-consultation-form {
+            width: 90%;
+        }
+
+        .free-consultation-head h1 {
+            font-size: 35px;
+        }
+
+        .footer-section {
+            height: auto;
+        }
+
+        .footer-section-one {
+            flex-direction: column;
+            height: auto;
+        }
+
+        .footer-section-address {
+            width: 90%;
+        }
+
+        .footer-section-links {
+            width: 90%;
+            justify-content: space-evenly;
+        }
+
+        .footer-section-base {
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .footer-section-base span {
+            text-align: center;
+            font-size: 12px;
+        }
+
+    }
+</style>
+
+<body>
+
+    <div class="fixed-social-medias">
+        <div class="chat-open">
+            <img id="whatsapp-icon" src="img/chatting.png" onclick="togglePopup()" />
+        </div>
+        <div id="popup" class="popup">
+            <div class="chat-content">
+                <div class="chat-header">
+                    <h1>Young and Right</h1>
+                </div>
+                <div class="chat-messages">
+                    <div class="main-text-area">
+                        <div class="time-stamp"><b>4:10 PM</b></div>
+                        <div class="message from">Welcome to Young And
+                            Right! Which service are you looking for
+                            today?</div>
+                        <div class="message from">Please select the services
+                            of your choice</div>
+                        <button class="message to" onclick="sendMessage('Book Keeping')">Book
+                            Keeping</button>
+                        <button class="message to" onclick="sendMessage('Auditing')">Auditing</button>
+                        <button class="message to" onclick="sendMessage('Corporate tax registration')">Corporate
+                            tax registration</button>
+                        <button class="message to" onclick="sendMessage('Vat Compliance')">Vat
+                            Compliance</button>
+                        <div class="delivered">Delivered</div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <textarea id="userInput" placeholder="Type Your Message and Enter"></textarea>
+                    <button id="emojiPickerButton">😀</button>
+                    <button onclick="sendMessage()"><img src="img/send.png" alt></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="home-section-one">
+        <div class="home-section-one-cnt">
+            <h1>Business Setup <br> Consultants In <br> Dubai,UAE</h1>
+            <span>We Take Care Of All Paper Works</span>
+            <button>FREE CONSULTATION</button>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="home-section-two-text">
+                    <h1>Leading Accounting & Auditing Company in Dubai,
+                        UAE</h1>
+                    <p>Young and Right LLC is an award-winning group
+                        accounting and auditing companies in Dubai that
+                        caters to a wide range of solutions pertaining to
+                        the setup and successful running of Business
+                        organizations in the United Arab Emirates. Our
+                        reputation of being one of the best in the industry
+                        is upheld by our team of passionate members who stay
+                        true to our core values of exceptional customer
+                        service. Furthermore Our accounting firm in Dubai
+                        can assist you in adapting to today’s market
+                        dynamics and remaining competitive, regardless of
+                        the threats you may face</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="home-section-two-cnt">
+                    <h1>12</h1>
+                    <h3>YEARS OF</h3>
+                    <h3>EXPERIENCE</h3>
+                    <div class="home-section-two-cnt-cards">
+                        <div class="counts-card">
+                            <img src="/img/group.png" alt>
+                            <h1>120+</h1>
+                            <span>Dedicated Team</span>
+                        </div>
+                        <div class="counts-card">
+                            <img src="/img/customer.png" alt>
+                            <h1>200+</h1>
+                            <span>Happy Clients</span>
+                        </div>
+                        <div class="counts-card">
+                            <img src="/img/search.png" alt>
+                            <h1>350+</h1>
+                            <span>Audit Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="background-section-three pt-3 pb-5">
+        <h1 class="text-center mt-3">What We Do</h1>
+        <p class="text-center background-section-three-p">Let us take care
+            of your accounting, audit and financial management needs with
+            our comprehensive VAT-compliant services!</p>
+        <div class="container mt-5 px-3">
+            <div class="row gx-5 gy-4">
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <img src="/img/cooperation.png" alt>
+                        <div class="services-card-text">
+                            <h3>Business Setup</h3>
+                            <p>Our business setup services make it easier
+                                for entrepreneurs to start their own
+                                business, with the right structure and
+                                investments in place to ensure success</p>
+                            <div class="read-more-btn">
+                                <a href>Read More</a>
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <img src="/img/document.png" alt>
+                        <div class="services-card-text">
+                            <h3>Accounting</h3>
+                            <p>Our business setup services make it easier
+                                for entrepreneurs to start their own
+                                business, with the right structure and
+                                investments in place to ensure success</p>
+                            <div class="read-more-btn">
+                                <a href>Read More</a>
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <img src="/img/audit.png" alt>
+                        <div class="services-card-text">
+                            <h3>Audit</h3>
+                            <p>Our business setup services make it easier
+                                for entrepreneurs to start their own
+                                business, with the right structure and
+                                investments in place to ensure success</p>
+                            <div class="read-more-btn">
+                                <a href>Read More</a>
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <img src="/img/auction.png" alt>
+                        <div class="services-card-text">
+                            <h3>Legal</h3>
+                            <p>Our business setup services make it easier
+                                for entrepreneurs to start their own
+                                business, with the right structure and
+                                investments in place to ensure success</p>
+                            <div class="read-more-btn">
+                                <a href>Read More</a>
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <img src="/img/award.png" alt>
+                        <div class="services-card-text">
+                            <h3>ICV Certification</h3>
+                            <p>Our business setup services make it easier
+                                for entrepreneurs to start their own
+                                business, with the right structure and
+                                investments in place to ensure success</p>
+                            <div class="read-more-btn">
+                                <a href>Read More</a>
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="services-card">
+                        <img src="/img/policy.png" alt>
+                        <div class="services-card-text">
+                            <h3>Liquidation</h3>
+                            <p>Our business setup services make it easier
+                                for entrepreneurs to start their own
+                                business, with the right structure and
+                                investments in place to ensure success</p>
+                            <div class="read-more-btn">
+                                <a href>Read More</a>
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pt-4 mb-5">
+        <div class="row gx-4">
+            <div class="col-md-4">
+                <div class="who-we-are-img">
+                    <img src="https://img.freepik.com/free-photo/portrait-happy-woman-with-digital-tablet_329181-11681.jpg?w=360"
+                        alt>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="who-we-are-content">
+                    <h1><span>Who </span>We Are</h1>
+                    <p>Young and Right is one of the best audit firms in UAE
+                        that provides cost-effective, value-added solutions
+                        to help businesses reach their goals. Our team of
+                        qualified and dedicated professionals is equipped
+                        with innovative and commercial approaches to
+                        navigate the increasingly challenging business
+                        world.</p>
+                    <p> Being one of the top audit firms in Dubai, we
+                        provide fresh perspectives and new ways of looking
+                        at businesses by means of business analysis,
+                        creative insight, and industry benchmarking. Our
+                        experienced and knowledgeable team of accountants
+                        and auditors in Dubai, who are part of the top
+                        auditing companies in Dubai, also serves as a
+                        sounding board for crucial financial decisions and
+                        provides dependable strategic leadership.</p>
+                    <p>Together, we are stronger! At Young and Right, we
+                        believe in working together to reach success. We
+                        work closely with our clients to ensure that every
+                        project is completed on time and on budget. We are
+                        committed to providing the highest level of customer
+                        service, and we take pride in our ability to deliver
+                        exceptional results.</p>
+                    <button class="read-more-button">Read More<i class="fa-solid fa-arrow-right-long"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="background-section-four pt-3 pb-5">
+        <h1 class="text-center mt-5">Safeguarding Compliance and Financial
+            Integrity:</h1>
+        <h5 class="text-center mt-3 mb-3">Contribution of Young and Right
+            LLC to Accounting and Auditing in Dubai, UAE:</h5>
+        <p class="text-center background-section-four-p">As one of the best
+            accounting firms in Dubai, our role in accounting and auditing
+            in Dubai,UAE is crucial to ensure financial transparency and
+            compliance with regulations.Here are the key points explaining
+            our role in this field:</p>
+        <div class="container mt-5 px-3">
+            <div class="row gx-5 gy-4">
+                <div class="col-md-4">
+                    <div class="contribution-card">
+                        <span>01</span>
+                        <h3>Expertise in Accounting and Auditing</h3>
+                        <p>We are a team of highly qualified professionals
+                            with extensive knowledge and experience in
+                            accounting and auditing practices. Our expertise
+                            allows us to provide accurate financial
+                            information and perform thorough audits of
+                            companies financial statements.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contribution-card">
+                        <span>02</span>
+                        <h3>Expertise in Accounting and Auditing</h3>
+                        <p>We are a team of highly qualified professionals
+                            with extensive knowledge and experience in
+                            accounting and auditing practices. Our expertise
+                            allows us to provide accurate financial
+                            information and perform thorough audits of
+                            companies financial statements.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contribution-card">
+                        <span>03</span>
+                        <h3>Expertise in Accounting and Auditing</h3>
+                        <p>We are a team of highly qualified professionals
+                            with extensive knowledge and experience in
+                            accounting and auditing practices. Our expertise
+                            allows us to provide accurate financial
+                            information and perform thorough audits of
+                            companies financial statements.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contribution-card">
+                        <span>04</span>
+                        <h3>Expertise in Accounting and Auditing</h3>
+                        <p>We are a team of highly qualified professionals
+                            with extensive knowledge and experience in
+                            accounting and auditing practices. Our expertise
+                            allows us to provide accurate financial
+                            information and perform thorough audits of
+                            companies financial statements.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contribution-card">
+                        <span>05</span>
+                        <h3>Expertise in Accounting and Auditing</h3>
+                        <p>We are a team of highly qualified professionals
+                            with extensive knowledge and experience in
+                            accounting and auditing practices. Our expertise
+                            allows us to provide accurate financial
+                            information and perform thorough audits of
+                            companies financial statements.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contribution-card">
+                        <span>06</span>
+                        <h3>Expertise in Accounting and Auditing</h3>
+                        <p>We are a team of highly qualified professionals
+                            with extensive knowledge and experience in
+                            accounting and auditing practices. Our expertise
+                            allows us to provide accurate financial
+                            information and perform thorough audits of
+                            companies financial statements.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contribution-card">
+                        <span>07</span>
+                        <h3>Expertise in Accounting and Auditing</h3>
+                        <p>We are a team of highly qualified professionals
+                            with extensive knowledge and experience in
+                            accounting and auditing practices. Our expertise
+                            allows us to provide accurate financial
+                            information and perform thorough audits of
+                            companies financial statements.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contribution-card">
+                        <span>08</span>
+                        <h3>Expertise in Accounting and Auditing</h3>
+                        <p>We are a team of highly qualified professionals
+                            with extensive knowledge and experience in
+                            accounting and auditing practices. Our expertise
+                            allows us to provide accurate financial
+                            information and perform thorough audits of
+                            companies financial statements.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contribution-card">
+                        <span>09</span>
+                        <h3>Expertise in Accounting and Auditing</h3>
+                        <p>We are a team of highly qualified professionals
+                            with extensive knowledge and experience in
+                            accounting and auditing practices. Our expertise
+                            allows us to provide accurate financial
+                            information and perform thorough audits of
+                            companies financial statements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="background-section-five">
+        <div class="why-choose-us">
+            <h1><span>Why</span> Choose Us</h1>
+            <h5>Our Record Speaks For Itself</h5>
+        </div>
+        <div class="container">
+            <div class="row gx-3 gy-3">
+                <div class="col-md-4">
+                    <div class="why-choose-card">
+                        <img src="img/efficiency.png" alt>
+                        <h1>Efficiency</h1>
+                        <p>We offer unparalleled efficiency and reliability.
+                            Our goal is to give our customers the best
+                            experience from accounting and auditing firms in
+                            UAE</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-choose-card">
+                        <img src="img/collaborate.png" alt>
+                        <h1>Integrity</h1>
+                        <p>We offer unparalleled efficiency and reliability.
+                            Our goal is to give our customers the best
+                            experience from accounting and auditing firms in
+                            UAE</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="why-choose-card">
+                        <img src="img/reliability.png" alt>
+                        <h1>TRANSPARENCY</h1>
+                        <p>We offer unparalleled efficiency and reliability.
+                            Our goal is to give our customers the best
+                            experience from accounting and auditing firms in
+                            UAE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container px-4 mb-5 pt-3">
+        <h2 class="mt-3 mb-3" style="color: #062F60;font-weight: 700;">FAQ</h2>
+        <div class="row gy-3">
+            <div class="col-12">
+                <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item border">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                What should I look for when selecting audit
+                                firms in Dubai?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse show collapse"
+                            aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body">
+                                For best performance, wind your watch daily.
+                                Take your watch off your wrist to ensure
+                                there is no strain on the watch’s mechanics.
+                                Carefully pull out the crown. Wind the crown
+                                clockwise until you feel resistance. Do not
+                                continue to wind after you feel that
+                                resistance, as you could strain the
+                                mechanism. Press the crown back down.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item border">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseTwo">
+                                Why do you need to outsource accounting?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body">
+                                For best performance, wind your watch daily.
+                                Take your watch off your wrist to ensure
+                                there is no strain on the watch’s mechanics.
+                                Carefully pull out the crown. Wind the crown
+                                clockwise until you feel resistance. Do not
+                                continue to wind after you feel that
+                                resistance, as you could strain the
+                                mechanism. Press the crown back down.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item border">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingfive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapsefive" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapsefive">
+                                Are you able to adhere to my deadlines?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingfive">
+                            <div class="accordion-body">
+                                Depending on the type of watch, a battery
+                                can last about two years. You will know when
+                                the battery needs to be changed when the
+                                watch doesn’t show the correct time, it’s
+                                difficult to adjust, there’s moisture or
+                                rattling in the case, or if the watch simply
+                                stops working.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item border">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingsix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapsesix" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapsesix">
+                                Why should I outsource bookkeeping?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapsesix" class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingsix">
+                            <div class="accordion-body">
+                                Now. The market is down 20%-30% off of
+                                highs, but still up overall. There is no
+                                best time or worst time; there is only now.
+                                We don’t know where the market will be.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item border">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingseven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseseven" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseseven">
+                                Who are your current clienteles?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseseven" class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingseven">
+                            <div class="accordion-body">
+                                Firstly, make sure you buy from a trusted
+                                source. You can spot a fake by any
+                                unfinished edged, print of the logo, feel of
+                                the metal, scratches or improper polish.
+                                Make sure the clasp, buckle and crown work.
+                                Train your eye by researching and inspecting
+                                real watches. If you can’t tell if it’s fake
+                                or don’t trust the source, bring the watch
+                                to a corporate service center to be checked.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item border">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseThree">
+                                What is the benefit to my company for
+                                choosing us?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                Luxury watches are available in a limited
+                                quantity because of the cost of producing
+                                the watch itself, raw materials and precious
+                                metals used, custom machinery, and the time
+                                it takes to design complicated movements,
+                                prototypes and build custom parts. At the
+                                end of the day, you’re buying a piece of
+                                art.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="free-consultation">
+        <div class="free-consultation-head">
+            <h1>Request for Our <br><span>Free Consultation</span></h1>
+            <p>Don’t miss out – take advantage of our free consultation and
+                take the first step towards achieving your goals</p>
+        </div>
+        <div class="free-consultation-form">
+            <form action>
+                <input type="text" name id placeholder="Name*" required>
+                <input type="text" name id placeholder="Phone*">
+                <input type="text" name id placeholder="Email*">
+                <button type="submit">SEND REQUEST</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="background-section-news pt-5 pb-5">
+        <h1 class="text-center mb-4">News & Blogs</h1>
+        <p class="text-center">Learn what is new in the world of audit and
+            accounting</p>
+        <div class="container mt-4">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="https://s31898.pcdn.co/wp-content/uploads/2019/07/shutterstock_430939246-e1563189675551-800x430.jpg"
+                                alt>
+                        </div>
+                        <div class="blog-card-content">
+                            <h1>Navigating VAT Regulations in Dubai: A
+                                Comprehensive Guide for Businesses</h1>
+                            <p>This blog post could delve into the Value
+                                Added Tax (VAT) system in Dubai, which was
+                                implemented in 2018</p>
+                            <div class="blog-card-content-base">
+                                <span>April 2,2024</span>
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="https://www.informalnewz.com/wp-content/uploads/2023/12/Income-Tax-Penalty.jpg"
+                                alt>
+                        </div>
+                        <div class="blog-card-content">
+                            <h1>The Role of Technology in Streamlining Tax
+                                Processes for Dubai Businesses</h1>
+                            <p>This blog post could delve into the Value
+                                Added Tax (VAT) system in Dubai, which was
+                                implemented in 2018</p>
+                            <div class="blog-card-content-base">
+                                <span>April 2,2024</span>
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="https://tax.thomsonreuters.com/blog/wp-content/uploads/sites/17/2022/06/AdobeStock_295967946-800x450.jpeg"
+                                alt>
+                        </div>
+                        <div class="blog-card-content">
+                            <h1>Maximizing Tax Efficiency: Strategies for
+                                Individuals and Businesses in Dubai</h1>
+                            <p>This blog post could delve into the Value
+                                Added Tax (VAT) system in Dubai, which was
+                                implemented in 2018</p>
+                            <div class="blog-card-content-base">
+                                <span>April 2,2024</span>
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-section">
+        <div class="footer-section-one">
+            <div class="footer-section-address">
+                <h1 class="start-your-business">START YOUR BUSINESS IN
+                    DUBAI</h1>
+                <p>Young & Right <br>
+                    Accounting & Tax Consulting Services LLC <br>
+                    API World Tower, Near World Trade Center Metro Station,
+                    Dubai <br>United Arab Emirates</p>
+            </div>
+            <div class="footer-section-links">
+                <h1>Business Setup</h1>
+                <a href>Freezone Business</a>
+                <a href>Mainland Company</a>
+                <a href>Company Liquidation</a>
+                <a href>Business License</a>
+                <a href>Rental Office</a>
+            </div>
+            <div class="footer-section-links">
+                <h1>Browse</h1>
+                <a href>Accounting Service</a>
+                <a href>Bookkeeping Service</a>
+                <a href>Internal Audit</a>
+                <a href>External Audit</a>
+            </div>
+            <div class="footer-section-links">
+                <h1>Services</h1>
+                <a href>VAT Compliance</a>
+                <a href>Bank Confirmation</a>
+                <a href>Account Payable</a>
+                <a href>Company Profile</a>
+                <a href>Cash In Hand</a>
+            </div>
+            <div class="footer-section-links">
+                <h1>Links</h1>
+                <a href>Happy Customers</a>
+                <a href>Clients</a>
+                <a href>Privacy Policy</a>
+                <a href>Terms & Conditions</a>
+                <a href>Digital Partner</a>
+            </div>
+        </div>
+        <div class="footer-section-base">
+            <span>Copyright © 2024 Y&R Consultancy. All Rights
+                Reserved.</span>
+            <div class="footer-section-base-links">
+                <a href><i class="fa-brands fa-facebook-f"></i></a>
+                <a href><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href><i class="fa-brands fa-instagram"></i></a>
+                <a href><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="payment-package pt-5 pb-5">
+        <h1 class="text-center payment-header">Exclusive Packages</h1>
+        <p class="text-center mb-5">Specially designed packages to simplify your Account Management</p>
+        <div class="container">
+            <div class="row gx-4 gy-4">
+                <div class="col-md-4">
+                    <div class="payment-card">
+                        <div class="payment-card-plan">
+                            <h1>AED <br> <span>999</span> <br> Month</h1>
+                            <h3>BASIC PLAN</h3>
+                        </div>
+                        <div class="package-details pt-4">
+                            <p><i class="fa-solid fa-check"></i><b>Up To 50 Monthly Transactions</b></p>
+                            <p><i class="fa-solid fa-check"></i><b>Get Free VAT & ESR Assessment</b></p>
+                            <p>- <br> - </p>
+                            <h5 class="mb-4 mt-2">Updating Day To Day Transactions</h5>
+                            <p><i class="fa-solid fa-check"></i>Sales</p>
+                            <p><i class="fa-solid fa-check"></i>Purchase</p>
+                            <p><i class="fa-solid fa-check"></i>General</p>
+                            <h5 class="mb-4 mt-2">Monthly Accounting Reports</h5>
+                            <p><i class="fa-solid fa-check"></i>Sales</p>
+                            <p><i class="fa-solid fa-check"></i>Accounts Receivable</p>
+                            <p><i class="fa-solid fa-check"></i>Accounts Payable</p>
+                            <p><i class="fa-solid fa-check"></i>Bank Reconciliation</p>
+                            <h5 class="mb-4 mt-2">Bank Reconciliation</h5>
+                            <p><i class="fa-solid fa-check"></i>Balance Sheet</p>
+                            <p><i class="fa-solid fa-check"></i>Income Statements</p>
+                            <p>-</p>
+                            <p>-</p>
+                        </div>
+                        <a href=""><button>Enquire Now</button></a>
+    
+                    </div>
+    
+                </div>
+                <div class="col-md-4">
+                    <div class="payment-card">
+                        <div class="payment-card-plan">
+                            <h1>AED <br> <span>1,999</span> <br> Month</h1>
+                            <h3>ADVANCED PLAN</h3>
+    
+                        </div>
+                        <div class="package-details pt-4">
+                            <p><i class="fa-solid fa-check"></i><b>Up To 50 Monthly Transactions</b></p>
+                            <p><i class="fa-solid fa-check"></i><b>Get Free VAT & ESR Assessment</b></p>
+                            <p><i class="fa-solid fa-check"></i><b>Notification Guidance With Annual Accounting Plan</b></p>
+                            <h5 class="mb-4 mt-2">Updating Day To Day Transactions</h5>
+                            <p><i class="fa-solid fa-check"></i>Sales</p>
+                            <p><i class="fa-solid fa-check"></i>Purchase</p>
+                            <p><i class="fa-solid fa-check"></i>General</p>
+                            <h5 class="mb-4 mt-2">Monthly Accounting Reports</h5>
+                            <p><i class="fa-solid fa-check"></i>Sales</p>
+                            <p><i class="fa-solid fa-check"></i>Accounts Receivable</p>
+                            <p><i class="fa-solid fa-check"></i>Accounts Payable</p>
+                            <p><i class="fa-solid fa-check"></i>Bank Reconciliation</p>
+                            <h5 class="mb-4 mt-2">Bank Reconciliation</h5>
+                            <p><i class="fa-solid fa-check"></i>Balance Sheet</p>
+                            <p><i class="fa-solid fa-check"></i>Income Statements</p>
+                            <p><i class="fa-solid fa-check"></i>Cash Flow Statement</p>
+                            <p>-</p>
+                        </div>
+                        <a href=""><button>Enquire Now</button></a>
+    
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="payment-card">
+                        <div class="payment-card-plan">
+                            <h1>AED <br> <span>2,999</span> <br> Month</h1>
+                            <h3>PREMIUM PLAN</h3>
+    
+                        </div>
+                        <div class="package-details pt-4">
+                            <p><i class="fa-solid fa-check"></i><b>Up To 50 Monthly Transactions</b></p>
+                            <p><i class="fa-solid fa-check"></i><b>Get Free VAT & ESR Assessment</b></p>
+                            <p><i class="fa-solid fa-check"></i><b>Notification Guidance With Annual Accounting Plan</b></p>
+                            <h5 class="mb-4 mt-2">Updating Day To Day Transactions</h5>
+                            <p><i class="fa-solid fa-check"></i>Sales</p>
+                            <p><i class="fa-solid fa-check"></i>Purchase</p>
+                            <p><i class="fa-solid fa-check"></i>General</p>
+                            <h5 class="mb-4 mt-2">Monthly Accounting Reports</h5>
+                            <p><i class="fa-solid fa-check"></i>Sales</p>
+                            <p><i class="fa-solid fa-check"></i>Accounts Receivable</p>
+                            <p><i class="fa-solid fa-check"></i>Accounts Payable</p>
+                            <p><i class="fa-solid fa-check"></i>Bank Reconciliation</p>
+                            <h5 class="mb-4 mt-2">Bank Reconciliation</h5>
+                            <p><i class="fa-solid fa-check"></i>Balance Sheet</p>
+                            <p><i class="fa-solid fa-check"></i>Income Statements</p>
+                            <p><i class="fa-solid fa-check"></i>Fixed Asset Register</p>
+                            <p><i class="fa-solid fa-check"></i>Financial Analysis</p>
+                        </div>
+                        <a href=""><button>Enquire Now</button></a>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container px-4 mb-5 pt-3">
+        <h2 class="mt-3 mb-3" style="color: #062F60;font-weight: 700;">FAQ</h2>
+        <div class="row gy-3">
+          <div class="col-12">
+      <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item border">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                What accounting services do you offer?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse show collapse" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+                We offer a comprehensive range of accounting services, including bookkeeping, financial reporting, tax preparation, VAT registration and compliance, payroll processing, and advisory services tailored to meet the unique needs of businesses in Dubai.
+          </div>
+          </div>
+        </div>
+        </div>
+          </div>
+          <div class="col-12">
+         <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item border">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                Do you specialize in any specific industries?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+               While we serve clients across various industries, we have particular expertise in sectors such as hospitality, real estate, retail, healthcare, and professional services. Our industry-specific knowledge allows us to provide tailored accounting solutions that address the specific challenges and requirements of each sector.
+            </div>
+          </div>
+        </div>
+        </div>
+          </div>
+          <div class="col-12">
+         <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item border">
+          <h2 class="accordion-header" id="panelsStayOpen-headingfive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefive" aria-expanded="false" aria-controls="panelsStayOpen-collapsefive">
+                How experienced is your team?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingfive">
+            <div class="accordion-body">
+               Our team comprises seasoned accounting professionals with extensive experience in the field. Collectively, we bring decades of expertise in accounting, tax, and financial management to deliver high-quality services and strategic insights to our clients in Dubai.
+            </div>
+          </div>
+        </div>
+        </div>
+          </div>
+          <div class="col-12">
+         <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item border">
+          <h2 class="accordion-header" id="panelsStayOpen-headingsix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsesix" aria-expanded="false" aria-controls="panelsStayOpen-collapsesix">
+                Are your services compliant with UAE tax regulations?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapsesix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingsix">
+            <div class="accordion-body">
+              Yes, our services are fully compliant with UAE tax regulations, including VAT laws and other relevant tax legislation. We stay updated with changes in tax regulations to ensure that our clients remain in compliance and minimize their tax liabilities.
+            </div>
+          </div>
+        </div>
+        </div>
+          </div>
+          <div class="col-12">
+         <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item border">
+          <h2 class="accordion-header" id="panelsStayOpen-headingseven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseseven" aria-expanded="false" aria-controls="panelsStayOpen-collapseseven">
+                What is the process for getting started with your accounting services?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseseven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingseven">
+            <div class="accordion-body">
+             Getting started with our accounting services is simple. You can schedule a consultation with our team to discuss your business needs and objectives. From there, we'll customize a service package tailored to your requirements and guide you through the onboarding process seamlessly.
+            </div>
+          </div>
+        </div>
+        </div>
+          </div>
+              <div class="col-12">
+      <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item border">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                Can you help with VAT registration and compliance?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body">
+              Absolutely. We provide end-to-end VAT registration and compliance services to ensure that your business meets all regulatory requirements. Our experts will assist you with VAT registration, filing VAT returns, maintaining records, and addressing any VAT-related queries or issues.
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+                  <div class="col-12">
+      <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item border">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree1" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree1">
+                What sets your accounting firm apart from others in Dubai?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree1" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree1">
+            <div class="accordion-body">
+              What sets us apart is our commitment to delivering exceptional service, personalized attention to our clients, and a deep understanding of the local business landscape in Dubai. We combine industry expertise with innovative solutions to help our clients achieve their financial goals and drive growth.
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+                  <div class="col-12">
+      <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item border">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree2" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree2">
+                Can you help with VAT registration and compliance?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree2" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree2">
+            <div class="accordion-body">
+              Absolutely. We provide end-to-end VAT registration and compliance services to ensure that your business meets all regulatory requirements. Our experts will assist you with VAT registration, filing VAT returns, maintaining records, and addressing any VAT-related queries or issues.
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+      </div>
+     
+    <script>
+
+        function togglePopup() {
+            var popup = document.getElementById('popup');
+            var whatsappIcon = document.getElementById('whatsapp-icon');
+            var chattext = document.getElementById('need-help-div');
+
+            if (popup.style.display === 'none' || popup.style.display === '') {
+                popup.style.display = 'block';
+                whatsappIcon.src = 'img/close.png';
+                chattext.style.display = "none";
+
+            } else {
+                popup.style.display = 'none';
+                whatsappIcon.src = 'img/chatting.png';
+            }
+        }
+
+        document.getElementById('emojiPickerButton').addEventListener('click', function () {
+            const picker = new EmojiPicker();
+            picker.showPicker(document.getElementById('userInput'));
+        });
+
+        function sendMessage(buttonValue) {
+            var userInput = document.getElementById('userInput').value;
+            var message = userInput;
+            if (buttonValue) {
+                message += ' ' + buttonValue; // Concatenate button value with user input
+            }
+
+            var chatArea = document.querySelector('.main-text-area');
+            var messageElement = document.createElement('div');
+            messageElement.classList.add('message');
+            messageElement.classList.add('user');
+            messageElement.textContent = message;
+            chatArea.appendChild(messageElement);
+
+            // Scroll to the bottom of the chat area
+            chatArea.scrollTop = chatArea.scrollHeight;
+
+            document.getElementById("userInput").value = "";
+        }
+        document.getElementById("userInput").addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); // Prevent default behavior (creating a new line)
+                sendMessage(); // Call sendMessage() function
+            }
+        });
+        document.getElementById("userInput").addEventListener("input", function () {
+            var textarea = this;
+            var maxChars = 40; // Maximum characters per line
+            var value = textarea.value;
+            var lines = value.split('\n');
+
+            for (var i = 0; i < lines.length; i++) {
+                if (lines[i].length > maxChars) {
+                    var line = lines[i];
+                    var newline = '';
+                    while (line.length > maxChars) {
+                        newline += line.substring(0, maxChars) + '\n';
+                        line = line.substring(maxChars);
+                    }
+                    newline += line;
+                    lines[i] = newline;
+                }
+            }
+
+            textarea.value = lines.join('\n');
+        });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

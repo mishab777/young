@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statutory</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+      .home-section-one{
+        height: 80vh;
+        /*background-image: url("{% static '/img/web-bg.jpg' %}");*/
+        /*background-size: cover;*/
+        background-color:#062F60;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .home-section-one-image{
+        width: 50%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content:center;
+    }
+    .home-section-one-image img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+    }
+    .home-section-one-cnt{
+        width: 45%;
+        display: flex;
+        height: 70%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .home-section-one-cnt h1{
+        font-weight: 700;
+        color:white;
+        letter-spacing: 1px;
+    }
+    .home-section-one-cnt h1 span{
+        font-weight: bold;
+    }
+    .home-section-one-cnt span{
+        color: white;
+    }
+    .home-section-one-cnt button{
+        background-color: white;
+        color: #062F60;
+        border-radius: 5px;
+        border: hidden;
+        font-size: 14px;
+        font-weight:650;
+        width: 180px;
+        height: 40px;
+
+    }
+    .section-main-p-2 a{
+        text-decoration: none;
+        color: white;
+    }
+    .section-main-p-2{
+        color:white;
+        font-weight:650;
+    }
+    .section-main-p-2 .last-span{
+        color:aquamarine;
+    }
+    .section-main-p-2 i{
+        margin-right:5px;
+        margin-left:5px;
+        color: aquamarine;
+    }
+    .best-accounting-cnt h1{
+        font-weight: 700;
+        color: #062F60;
+    }
+    .best-accounting-cnt p i{
+        margin-right: 10px;
+        color: green;
+    }
+    .accounting-img{
+        width: 100%;
+        height: 50vh;
+    }
+    .accounting-img img{
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+    }
+    .why-choose-us h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .why-choose-us h5{
+        font-weight: 650;
+        margin-bottom: 20px;
+    }
+    .why-choose-us h5 i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us p{
+        margin-bottom: 30px;
+    }
+    .benefit-points{
+        height: auto;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .benefit-points-open{
+        height: auto;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .collapse{
+        width: 100%;
+    }
+    .benefits h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .benefit-points span{
+        font-weight: 700;
+        font-size: 18px;
+        opacity: 0.8;
+        letter-spacing: 1px;
+    }
+    .benefit-points i{
+        font-size: 22px;
+        color: rgb(5, 172, 5);
+    }
+    .what-is-internal h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: "Lato", sans-serif;
+  font-style: normal;
+    }
+    .approach h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: "Lato", sans-serif;
+  font-style: normal;
+    }
+    .services h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: "Lato", sans-serif;
+  font-style: normal;
+    }
+    .services p{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .services p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+
+    }
+    .audit h1{
+        color: #062F60;
+        font-weight: 700;
+        font-size: 30px;
+    }
+    .audit p{
+        font-size: 18px;
+    }
+    .audit p i{
+        margin-left: 10px;
+        margin-right: 10px;
+        color: rgb(5, 205, 5);
+    }
+    @media(min-width:320px) and (max-width:480px){
+        .home-section-one{
+            flex-direction: column;
+            height: 100vh;
+        }
+        .home-section-one-cnt{
+            width: 90%;
+            height: 50%;
+            justify-content: space-evenly;
+        }
+        .home-section-one-image{
+            width: 90%;
+            height: 50%;
+        }
+    }
+</style>
+<body>
+<div class="home-section-one">
+<div class="home-section-one-cnt">
+<h1>LIQUIDATION AUDIT</h1>
+<span>A liquidation audit in Dubai involves a thorough examination of a company's financial records</span>
+<a href="#free"><button>FREE CONSULTATION</button></a>
+<p class="section-main-p-2 "><a href="">Home</a><i class="fa-solid fa-angles-right"></i><a href="">Auditing</a><i class="fa-solid fa-angles-right"></i><span class="last-span">Internal Audit</span></p>
+</div>
+<div class="home-section-one-image">
+    <img src="https://fobel.in/wp-content/uploads/2022/03/fobel-accounting.png">
+</div>
+</div>
+
+<div class="container mt-5 mb-5 what-is-internal">
+<p>This process ensures careful handling of the company's affairs, converting its assets into cash. The liquidator, responsible for overseeing the liquidation, will then proceed to submit an application to relevant authorities, such as Companies House, to formally deregister and liquidate the business.</p>
+<p>The company's official dissolution signifies the conclusion of its legal entity status. Throughout liquidation, proceeds from asset sales are utilized to settle outstanding debts, with any leftover funds distributed to creditors and shareholders according to predetermined priorities. The primary objective is to fulfill financial obligations, enhance asset value, and protect stakeholder interests. Following a successful dissolution, the company ceases to exist legally.</p>
+</div>
+
+<div class="container mt-5 mb-5 what-is-internal">
+    <h1 class="mb-4">What is Liquidation Audit?</h1>
+    <p>A liquidation audit is an examination of a company's financial records, assets, liabilities, and transactions conducted during the process of winding up or liquidating the company. When a company undergoes liquidation, its assets are sold off, and the proceeds are used to settle outstanding debts and liabilities. The purpose of the liquidation audit is to ensure that this process is conducted fairly, transparently, and in compliance with applicable laws and regulations.</p>
+    </div>
+
+    <div class="container mt-5 mb-5 what-is-internal">
+        <h1 class="mb-4">What is the Purpose of Liquidation Audit?</h1>
+        <p>Liquidating a company's assets for dissolution is a more complex process than simply shutting down operations or turning off a light. Audits play a crucial role in the liquidation process, especially for businesses that are closing down. These audits are essential for ensuring a proper closure and obtaining a company closure certificate.</p>
+        <p>By examining a company's assets and liabilities, these audits help prevent objections from creditors. During liquidation, assets are converted into cash to settle debts and other obligations. Stringent regulations govern the distribution of assets, requiring accurate and detailed information for the liquidator to follow.</p>
+        <p>A post-liquidation audit verifies the proper allocation and valuation of assets. This report addresses creditors' concerns about the liquidator's decisions and ensures fair distribution of funds.</p>
+        </div>
+
+    
+<div class="container why-choose-us">
+    <h1 class="mb-4">Reason For Liquidation of a Company</h1>
+    <div class="d-flex flex-column">
+<h5><i class="fa-solid fa-circle-arrow-right"></i>Financial Distress :</h5>
+<p class="">Financial difficulties such as persistent losses, declining revenues, high debt levels, or cash flow problems may lead a company to liquidate its assets to pay off creditors and settle liabilities. In such cases, liquidation may be seen as a way to mitigate further financial losses and avoid bankruptcy.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Insolvency :</h5>
+        <p>If a company is unable to meet its financial obligations as they become due, it may be deemed insolvent. Insolvency can result from various factors, including poor financial management, economic downturns, or unexpected business disruptions. In such cases, liquidation may be necessary to distribute the company's assets fairly among creditors and wind up its operations.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Business Restructuring :</h5>
+        <p> Companies may choose to liquidate certain divisions, subsidiaries, or non-core assets as part of a strategic restructuring or realignment of business priorities. Liquidation in this context aims to streamline operations, reduce costs, and focus resources on core business activities.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Mergers and Acquisitions :</h5>
+        <p> In mergers and acquisitions (M&A) transactions, the acquiring company may decide to liquidate certain assets or subsidiaries of the target company that are deemed redundant or non-strategic. Liquidation may be part of the integration process to eliminate overlapping operations and achieve synergies between the merged entities.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Shareholder Dissolution :</h5>
+        <p> Shareholders may decide to liquidate a company if they no longer wish to continue its operations or if they cannot reach a consensus on the company's future direction. This could happen due to disputes among shareholders, diverging business objectives, or changes in personal circumstances.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Legal or Regulatory Requirements :</h5>
+        <p> Companies may be required to liquidate their operations due to legal or regulatory reasons, such as violations of laws, loss of regulatory licenses, or court orders. Liquidation may be imposed by regulatory authorities as a consequence of non-compliance with legal obligations or as a remedy for corporate misconduct.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>End of Business Life cycle  :</h5>
+        <p> Some businesses may reach the natural end of their lifecycle due to changes in market conditions, technological advancements, or shifts in consumer preferences. In such cases, the owners may decide to liquidate the company and distribute its assets to shareholders or creditors.</p>
+    </div>
+</div>
+
+
+
+
+<div class="container mt-5 why-choose-us">
+    <h1 class="mb-4">The Role of Auditors in Company Liquidation</h1>
+    <p>During liquidations, equity stockholders often receive minimal or no returns as they are at the bottom of the asset allocation hierarchy, trailing behind other stakeholders and creditors. In situations of insolvency or impending insolvency, the company's auditor can provide valuable advice on asset allocation. Their expertise aids in making fair and lawful distributions that adhere to regulations and maximize benefits for all parties involved. The auditor compiles a liquidation audit report outlining the company's assets and liabilities, providing the liquidator with essential financial details. Throughout the liquidation process, all assets are liquidated into cash and distributed to creditors or other business obligations.</p>
+
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"  crossorigin="anonymous" ></script>
+</body>
+</html>

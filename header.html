@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .navbar-section-one{
+        height: 80px;
+        width: 90%;
+        display: flex;
+        border-bottom: 1px solid rgb(211, 211, 211);
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+    }
+    .navbar-one-logo{
+        width: 30%;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        justify-content:flex-start;
+    }
+    .navbar-one-logo img{
+        width: auto;
+        height: 90%;
+        object-fit: contain;
+    }
+    .navbar-one-contact{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    .nav-contact{
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-whatsapp{
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-contact-dts{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-whatsapp-dts{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-one-contact span{
+        font-size: 12px;
+        font-weight: 650;
+        color: #062F60;
+    }
+    .navbar-one-contact a{
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .navbar-one-contact i{
+        font-size: 25px;
+        color: #062F60;
+        margin-right: 10px;
+    }
+    .navbar-section-two{
+        width: 80%;
+        margin: auto;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .navbar-section-two a{
+        text-decoration: none;
+        color: #062F60;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    .navbar-section-two a i{
+        margin-left: 10px;
+    }
+    .dropdown{
+        position: relative;
+    }
+    .dropdown-content{
+        display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: -50px;
+    height: auto;
+    width: 500px;
+    }
+    .dropdown:hover .dropdown-content{
+        display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 3%;
+    justify-content: space-evenly;
+    }
+    .dropdown-content a{
+        text-decoration: none;
+        color: black;
+        height: 80px;
+        width: 50%;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar-section-mobile{
+        display: none;
+    }
+    @media(min-width:320px) and (max-width:480px){
+.who-we-are-content{
+    height: auto;
+}
+.navbar-section-one{
+    display: none;
+}
+.navbar-section-two{
+    display: none;
+}
+.navbar-section-mobile{
+width: 100%;
+height: 80px;
+display: flex;
+flex-direction: row;
+align-items: center;
+padding-left: 3%;
+padding-right: 3%;
+justify-content: space-between;
+background-color: white;
+}
+.navbar-section-mobile img{
+    width: auto;
+    height: 70px;
+}
+.navbar-section-mobile button{
+background: transparent;
+border: hidden;
+}
+.navbar-section-mobile button i{
+    color: #062F60;
+    font-size: 25px;
+}
+
+    }
+</style>
+<body>
+    <div class="navbar-section-mobile" >
+        <img src="/img/young.png" alt="">
+        <button><i class="fa-solid fa-bars"></i></button>
+    </div>
+<div class="navbar-section-one">
+<div class="navbar-one-logo">
+    <img src="/img/young.png" alt="">
+</div>
+<div class="navbar-one-contact">
+    <div class="nav-contact">
+        <i class="fa-solid fa-headset"></i>
+        <div class="nav-contact-dts">
+<span>Call Us</span>
+<a>+971 56 709 2500</a>
+        </div>
+    </div>
+    <div class="nav-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <div class="nav-whatsapp-dts">
+            <span>Whatsapp</span>
+            <a>+971 56 709 2500</a>
+        </div>
+    </div>
+</div>
+</div>
+<div class="navbar-section-two">
+    <div class="dropdown">
+<a href="">Accounting<i class="fa-solid fa-caret-down"></i></a>
+<div class="dropdown-content">
+<a href="">Bookkeeping Services</a>
+<a href="">Accounts Payable Outsourcing</a>
+<a href="">Accounting & Financial Reporting</a>
+<a href="">Free Consultation</a>
+<a href="">Payroll Serices</a>
+<a href="">Updating Of Backlog Accounts</a>
+</div>
+</div>
+
+<a href="">Auditing<i class="fa-solid fa-caret-down"></i></a>
+<a href="">Advisory & Consulting<i class="fa-solid fa-caret-down"></i></a>
+<a href="">About Us<i class="fa-solid fa-caret-down"></i></a>
+<a href="">News & Media<i class="fa-solid fa-caret-down"></i></a>
+<a href="">Contact<i class="fa-solid fa-caret-down"></i></a>
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"  crossorigin="anonymous" ></script>
+</body>
+</html>

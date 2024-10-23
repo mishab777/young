@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statutory</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+      .home-section-one{
+        height: 80vh;
+        /*background-image: url("{% static '/img/web-bg.jpg' %}");*/
+        /*background-size: cover;*/
+        background-color:#062F60;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .home-section-one-image{
+        width: 50%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content:center;
+    }
+    .home-section-one-image img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+    }
+    .home-section-one-cnt{
+        width: 45%;
+        display: flex;
+        height: 70%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .home-section-one-cnt h1{
+        font-weight: 700;
+        color:white;
+        letter-spacing: 1px;
+    }
+    .home-section-one-cnt h1 span{
+        font-weight: bold;
+    }
+    .home-section-one-cnt span{
+        color: white;
+    }
+    .home-section-one-cnt button{
+        background-color: white;
+        color: #062F60;
+        border-radius: 5px;
+        border: hidden;
+        font-size: 14px;
+        font-weight:650;
+        width: 180px;
+        height: 40px;
+
+    }
+    .section-main-p-2 a{
+        text-decoration: none;
+        color: white;
+    }
+    .section-main-p-2{
+        color:white;
+        font-weight:650;
+    }
+    .section-main-p-2 .last-span{
+        color:aquamarine;
+    }
+    .section-main-p-2 i{
+        margin-right:5px;
+        margin-left:5px;
+        color: aquamarine;
+    }
+    .best-accounting-cnt h1{
+        font-weight: 700;
+        color: #062F60;
+    }
+    .best-accounting-cnt p i{
+        margin-right: 10px;
+        color: green;
+    }
+    .accounting-img{
+        width: 100%;
+        height: 50vh;
+    }
+    .accounting-img img{
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+    }
+    .why-choose-us h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .why-choose-us h5{
+        font-weight: 650;
+        margin-bottom: 20px;
+    }
+    .why-choose-us h5 i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us p{
+        margin-bottom: 30px;
+    }
+    .benefit-points{
+        height: auto;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .benefit-points-open{
+        height: auto;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .collapse{
+        width: 100%;
+    }
+    .benefits h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .benefit-points span{
+        font-weight: 700;
+        font-size: 18px;
+        opacity: 0.8;
+        letter-spacing: 1px;
+    }
+    .benefit-points i{
+        font-size: 22px;
+        color: rgb(5, 172, 5);
+    }
+    .what-is-internal h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: "Lato", sans-serif;
+  font-style: normal;
+    }
+    .approach h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: "Lato", sans-serif;
+  font-style: normal;
+    }
+    .services h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: "Lato", sans-serif;
+  font-style: normal;
+    }
+    .services p{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .services p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+
+    }
+    .audit h1{
+        color: #062F60;
+        font-weight: 700;
+        font-size: 30px;
+    }
+    .audit p{
+        font-size: 18px;
+    }
+    .audit p i{
+        margin-left: 10px;
+        margin-right: 10px;
+        color: rgb(5, 205, 5);
+    }
+    .penalty h1{
+        color: #062F60;
+        font-weight: 700;
+        font-size: 30px;
+    }
+    .penalty p i{
+        margin-right: 10px;
+        color: rgb(5, 205, 5);
+        font-size: 20px;
+    }
+    .penalty p{
+        font-weight: 600;
+    }
+    @media(min-width:320px) and (max-width:480px){
+        .home-section-one{
+            flex-direction: column;
+            height: 100vh;
+        }
+        .home-section-one-cnt{
+            width: 90%;
+            height: 50%;
+            justify-content: space-evenly;
+        }
+        .home-section-one-image{
+            width: 90%;
+            height: 50%;
+        }
+    }
+</style>
+<body>
+
+    
+<div class="home-section-one">
+<div class="home-section-one-cnt">
+<h1>Audit in Free Zone Dubai</h1>
+<span>An audit in the Free Zone of Dubai entails a comprehensive examination of financial records</span>
+<a href="#free"><button>FREE CONSULTATION</button></a>
+<p class="section-main-p-2 "><a href="{% url 'home' %}">Home</a><i class="fa-solid fa-angles-right"></i><a href="{% url 'audit' %}">Auditing</a><i class="fa-solid fa-angles-right"></i><span class="last-span">Audit in Free Zone</span></p>
+</div>
+<div class="home-section-one-image">
+    <img src="img/burj-removebg-preview.png">
+</div>
+</div>
+
+<div class="container mt-5 mb-5 what-is-internal">
+<h1 class="mb-4">Auditing in Dubai free zones.</h1>
+<p>An audit conducted in a UAE free zone involves reviewing and examining a company's financial records and statements to confirm compliance with the accounting standards and regulations established by the free zone authority. Approved auditors or audit firms appointed by the Free Zone authority in the UAE typically carry out the audit to offer stakeholders assurance regarding the accuracy and reliability of the financial statements.In Dubai's free zones, audits are conducted to ensure that businesses operating within these zones adhere to regulatory requirements, maintain accurate financial records, and comply with relevant laws and regulations.An audit in a free zone in Dubai would typically involve a thorough examination of financial records, transactions, and compliance with regulations specific to that free zone. Free zones in Dubai, such as Jebel Ali Free Zone (JAFZA), Dubai Multi Commodities Centre (DMCC), Dubai Airport Free Zone (DAFZA), among others, offer businesses favorable conditions for operations, including tax incentives, 100% foreign ownership, and simplified customs procedure</p>
+</div>
+
+    
+<div class="container why-choose-us">
+    <h1 class="mb-4">Is an Audit Required for UAE Free Zones?</h1>
+    <p class="mb-4">In the UAE's free zones, companies that surpass a specific turnover threshold or have a certain number of employees are required to undergo an audit. Not meeting the audit requirements can lead to penalties or fines enforced by the free zone authority.</p>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Regulatory Requirements :</h5>
+        <p> Each free zone has its own set of rules, regulations, and compliance standards that businesses must adhere to. These requirements are often established by the respective free zone authorities to maintain transparency, accountability, and legal compliance within the free zone.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Financial Reporting Standards :</h5>
+        <p>Companies operating within UAE free zones are typically required to prepare financial statements in accordance with internationally recognized accounting standards, such as International Financial Reporting Standards (IFRS) or Generally Accepted Accounting Principles (GAAP). Audits help ensure the accuracy and integrity of these financial statements.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Tax Compliance :</h5>
+        <p> While many UAE free zones offer tax incentives and exemptions, companies operating within these zones are still subject to UAE tax laws, including Value Added Tax (VAT) and corporate income tax (where applicable). Audits may include a review of tax compliance to ensure businesses fulfill their tax obligations.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Audit Process :</h5>
+        <p>The audit process typically involves engaging a qualified audit firm to conduct an independent examination of the company's financial records, transactions, internal controls, and compliance practices. The audit firm assesses the company's financial statements, identifies any discrepancies or areas of concern, and provides an opinion on their accuracy and compliance with relevant standards and regulations.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Regulatory Oversight :</h5>
+        <p>Free zone authorities oversee the audit process and may require companies to submit audit reports or other documentation as part of their regulatory obligations. Non-compliance with audit requirements or failure to submit required reports may result in penalties or sanctions imposed by the free zone authority.</p>
+    </div>
+</div>
+
+
+<div class="container mb-5 penalty">
+    <h1 class="text-center mb-4">Penalties for Audit Submission in UAE Free Zones</h1>
+    <div class="row gx-4 gy-3">
+        <div class="col-md-6 p-3">
+<p><i class="fa-solid fa-hand-point-right"></i>Non-compliance penalties for failing to submit audit statements in UAE Free Zones can differ depending on the particular free zone authority and the level of non-compliance. Fines in UAE Free Zones can range from 2500 AED to 5000 AED depending on the free zone and the length of non-compliance.</p>
+        </div>
+        <div class="col-md-6 p-3">
+<p><i class="fa-solid fa-hand-point-right"></i>Not submitting the necessary audit statements within the set time frame for UAE Free Zones can lead to fines, penalties, and potential suspension or revocation of the company's trade license.</p>
+        </div>
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"  crossorigin="anonymous" ></script>
+</body>
+</html>

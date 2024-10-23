@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditing</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .section-main{
+        width: 100%;
+        height: 80vh;
+        background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url(img/audit-bg.jpg);
+        background-size: cover;
+        display: flex;
+        align-items: flex-start;
+        justify-content:center;
+        flex-direction: column;
+        padding: 6%;
+    }
+    .section-main h1{
+color: white;
+font-size: 45px;
+font-weight: 700;
+    }
+    .section-main p{
+        width: 50%;
+        color: white;
+    }
+    .section-main button{
+        width: 200px;
+        height: 40px;
+        background-color: #062F60;
+        color: white;
+        border: hidden;
+        outline: none;
+        font-size: 14px;
+    }
+    .read-more-button{
+        width: 150px;
+        height: 40px;
+        background-color: #062F60;
+        color: white;
+        border: hidden;
+        outline: none;
+        font-size: 14px;
+    }
+    .read-more-button i{
+        margin-left: 10px;
+    }
+    .best-accounting-cnt h1{
+        font-weight: 700;
+        color: #062F60;
+    }
+    .best-accounting-cnt p i{
+        margin-right: 10px;
+        color: green;
+    }
+    .accounting-img{
+        width: 100%;
+        height: 80vh;
+    }
+    .accounting-img img{
+        width: 90%;
+        object-fit: cover;
+        height: 100%;
+    }
+    .advantage-header{
+        font-size: 30px;
+        font-weight: 650;
+        color:#062F60;
+    }
+    .audit h1{
+        color: #062F60;
+        font-weight: 700;
+        font-size: 30px;
+    }
+    .audit p{
+        font-size: 18px;
+    }
+    .audit p i{
+        margin-right: 10px;
+        color: rgb(5, 205, 5);
+    }
+    .benefits img{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .benefits h1{
+        color: #062F60;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .benefits p{
+        color: gray;
+    }
+    .procedure h3{
+        font-size: 20px;
+    }
+    .procedure p{
+        font-size: 18px;
+    }
+    .procedure p i{
+        color: rgb(5, 205, 5) ;
+        margin-right: 10px;
+    }
+    .steps{
+        height: auto;
+        width: 100%;
+        background-color: #e6f7ff;
+    }
+    .steps button{
+        font-weight: 700;
+        font-size: 20px;
+        color: #062F60;
+    }
+    .steps h2{
+        color: #062F60;
+        font-weight: 700;
+    }
+    .social-media-icons{
+      width: 45px;
+      height: auto;
+      background-color: #062F60;
+      position: fixed;
+      left: 0;
+      top: 50vh;
+      z-index: 99;
+      border-radius: 0px 5px 5px 0px;
+    }
+    .social-media-icons a{
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.4s ease;
+    }
+    .social-media-icons a i{
+      color: #fff;
+      font-size: 18px;
+    }
+    .social-media-icons a:hover{
+      background-color: #fff;
+    }
+    .social-media-icons a:hover i{
+      color: #062F60;
+      background-color: rgb(215, 215, 215);
+    }
+    @media(min-width:320px) and (max-width:480px){
+      .section-main h1{
+        font-size: 25px;
+      }
+      .section-main{
+        background-size: contain;
+        height: 50vh;
+      }
+      .accounting-img{
+        height: 60vh;
+      }
+    }
+</style>
+<body>
+
+<div class="social-media-icons">
+<a target="_blank" href="https://www.instagram.com/young_and_right_/?igsh=eWtrenhhM2Z6cHBp"><i class="fa-brands fa-instagram"></i></a>
+<a target="_blank" href="https://www.facebook.com/profile.php?id=61556833402370&mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
+<a target="_blank" href="https://www.linkedin.com/company/young-and-right-accounting-and-tax-solution/"><i class="fa-brands fa-linkedin-in"></i></a>
+<a target="_blank" href=""><i class="fa-brands fa-x-twitter"></i></a>
+<a target="_blank" href=""><i class="fa-brands fa-reddit"></i></a>
+<a target="_blank" href=""><i class="fa-brands fa-tiktok"></i></a>
+</div>
+
+
+<div class="section-main">
+<h1 class="mb-3">Get Your Finances Audited <br> By Best Auditors in Dubai!</h1>
+<p class="mb-3">Welcome to the best Audit Services in Dubai, UAE- the ultimate destination for top-notch Auditors!</p>
+<button>FREE CONSULTATION</button>
+</div>
+
+<div class="container mt-5 mb-5">
+    <div class="row gx-4">
+        <div class="col-md-5">
+    <div class="accounting-img">
+        <img src="https://www.shutterstock.com/image-photo/mature-businessman-leader-mentor-talking-600nw-2024994161.jpg" alt="">
+    </div>
+        </div>
+        <div class="col-md-7">
+            <div class="best-accounting-cnt">
+    <h1 class="mb-4">Best Auditing Services <br> in Dubai</h1>
+   <p class="mb-4">Audit services, in essence, increase the trustworthiness of financial information with assurance services to help prepared by clients for use by investors, creditors, and other stakeholders. A&A Associate auditing services in Dubai strive hard to give our clients meaningful information to help them improve their operations where possible.</p>
+   <p>Based on our strong local expertise and a genuinely worldwide attitude and network, we serve big, medium-sized, growth-oriented, and complicated organizations in the United Arab Emirates. Our audit services in Dubai are founded on our core principles of professionalism, ethics, quality, and diligence</p>
+    </div>
+        </div>
+    </div>
+    </div>
+
+<div class="container audit">
+    <h1 class="mb-4">Reasons to Conduct Audit</h1>
+    <p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i><b>Compliance:</b> Our Audit services in Dubai ensure that organizations comply with relevant laws, regulations, and industry standards, reducing legal and regulatory risks.</p>
+    <p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i><b>Financial Accuracy:</b> Our Audit services in Dubai ensure that organizations comply with relevant laws, regulations, and industry standards, reducing legal and regulatory risks.</p>
+    <p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i><b>Fraud Detection: </b> Our Audit services in Dubai ensure that organizations comply with relevant laws, regulations, and industry standards, reducing legal and regulatory risks.</p>
+    <p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i><b>Internal Control Evaluation: </b> Our Audit services in Dubai ensure that organizations comply with relevant laws, regulations, and industry standards, reducing legal and regulatory risks.</p>
+    <p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i><b>Risk Assessment:</b> Our Audit services in Dubai ensure that organizations comply with relevant laws, regulations, and industry standards, reducing legal and regulatory risks.</p>
+    <p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i><b>Performance Evaluation:</b> Our Audit services in Dubai ensure that organizations comply with relevant laws, regulations, and industry standards, reducing legal and regulatory risks.</p>
+    <p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i><b>Decision-making Support:</b> Our Audit services in Dubai ensure that organizations comply with relevant laws, regulations, and industry standards, reducing legal and regulatory risks.</p>
+    <p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i><b>Continuous Improvement:</b> Our Audit services in Dubai ensure that organizations comply with relevant laws, regulations, and industry standards, reducing legal and regulatory risks.</p>
+</div>
+
+<div class="container benefits mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-7">
+<h1 class="mb-5">Benefits of Auditing Services in UAE</h1>
+<p>In the United Arab Emirates (UAE), conducting an audit is a highly comprehensive and intricate task due to the annual audit requirement imposed on companies. Our audit services in UAE involves an impartial assessment of an organization’s financial report by an external party. Its purpose is to provide an accurate and unbiased view of the financial information presented by the management. Top Auditors in Dubai engage in discussions with the requesting party to define the audit’s scope, allowing for the planning of additional procedures that ensure their independence from the management and promote objective functioning.</p>
+        </div>
+        <div class="col-md-5">
+<img src="https://www.jaxaauditors.com/sites/default/files/2023-10/Advantages%20of%20Auditing.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="container procedure mt-5 mb-5">
+<h3 class="mb-5">The audit procedures from all Auditing Services in Dubai requires the following documents to start:</h3>
+<p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i>Bank statements</p>
+<p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i>Confirmation of credit/debit transactions recorded in the Books of Accounts</p>
+<p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i>Invoices for purchases and sales</p>
+<p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i>Trade License, Memorandum of Association (MOA), Articles of Association (AOA)</p>
+<p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i>VAT Certificate</p>
+<p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i>Expense details</p>
+<p class="mb-3"><i class="fa-solid fa-arrow-right-long"></i>KYC Documents</p>
+
+</div>
+
+
+<div class="steps pb-3 pt-5">
+
+    <div class="container px-4 mb-5 pt-3">
+        <h2 class="mt-3 mb-5 text-center">What are the steps in an audit process in Dubai?</h2>
+        <div class="row gy-3">
+          <div class="col-12">
+      <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                Document Preparation:
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse show collapse" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+                For best performance, wind your watch daily. Take your watch off your wrist to ensure there is no strain on the watch’s mechanics. Carefully pull out the crown. Wind the crown clockwise until you feel resistance. Do not continue to wind after you feel that resistance, as you could strain the mechanism. Press the crown back down.
+          </div>
+          </div>
+        </div>
+        </div>
+          </div>
+          <div class="col-12">
+         <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                Audit Commencement:
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+               For best performance, wind your watch daily. Take your watch off your wrist to ensure there is no strain on the watch’s mechanics. Carefully pull out the crown. Wind the crown clockwise until you feel resistance. Do not continue to wind after you feel that resistance, as you could strain the mechanism. Press the crown back down.
+            </div>
+          </div>
+        </div>
+        </div>
+          </div>
+          <div class="col-12">
+         <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingfive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsefive" aria-expanded="false" aria-controls="panelsStayOpen-collapsefive">
+                Report Preparation:
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapsefive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingfive">
+            <div class="accordion-body">
+               Depending on the type of watch, a battery can last about two years. You will know when the battery needs to be changed when the watch doesn’t show the correct time, it’s difficult to adjust, there’s moisture or rattling in the case, or if the watch simply stops working.
+            </div>
+          </div>
+        </div>
+        </div>
+          </div>
+          <div class="col-12">
+         <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingsix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsesix" aria-expanded="false" aria-controls="panelsStayOpen-collapsesix">
+                Compliance with Policies:
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapsesix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingsix">
+            <div class="accordion-body">
+              Now. The market is down 20%-30% off of highs, but still up overall. There is no best time or worst time; there is only now. We don’t know where the market will be.
+            </div>
+          </div>
+        </div>
+        </div>
+          </div>
+          <div class="col-12">
+         <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingseven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseseven" aria-expanded="false" aria-controls="panelsStayOpen-collapseseven">
+                Closing Meeting:
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseseven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingseven">
+            <div class="accordion-body">
+              Firstly, make sure you buy from a trusted source. You can spot a fake by any unfinished edged, print of the logo, feel of the metal, scratches or improper polish. Make sure the clasp, buckle and crown work. Train your eye by researching and inspecting real watches. If you can’t tell if it’s fake or don’t trust the source, bring the watch to a corporate service center to be checked.
+            </div>
+          </div>
+        </div>
+        </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"  crossorigin="anonymous" ></script>
+</body>
+</html>

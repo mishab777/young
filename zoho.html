@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoho</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+  *{
+    font-family: "Lato", system-ui;
+  }
+  .hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, #062f60, #004977, #006285, #007b8a, #01938a);
+  }
+  .hero-image{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .hero-image img{
+    width: 100%;
+    height: auto;
+    position: relative;
+    animation: slideFromBottom 1.5s ease-out forwards;
+    transform: translateY(100%);
+  }
+  @keyframes slideFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+  .hero-content{
+    width: 50%;
+    display: flex;
+    padding-top: 6%;
+    padding-right: 3%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+
+  }
+  .hero-content h1{
+    font-size: 40px;
+    font-weight: 400;
+    color: #fff;
+  }
+  .hero-content h1 span{
+    font-weight: 700;
+  }
+  .hero-content h3{
+    font-size: 25px;
+    color: #FEE304;
+  }
+  .hero-content p{
+    color: #fff;
+  }
+  .hero-content button{
+    background-color: #fff;
+    color: #004977;
+    width: 250px;
+    font-weight: 600;
+    text-transform: uppercase;
+    height: 40px;
+    border: hidden;
+  }
+  .hero-content img{
+    width: auto;
+    height: 100px;
+    object-fit: contain;
+  }
+  .navbar{
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-logo img{
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    margin-right: 10px;
+  }
+  .nav-logo span{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .nav-links{
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .nav-links a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+  }
+  .nav-links a i{
+    margin-right: 8px;
+  }
+  .points-section-1{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    padding: 4%;
+    background-color: #24AC4A;
+    align-items: center;
+    border-radius:0px 15px 0px 15px;
+    justify-content: center;
+  }
+  .points-section-1 h3{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .section-2-content{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .section-2-content h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #000;
+  }
+  .section-2-content p{
+    font-size: 16px;
+  }
+  .section-2-content li i{
+    margin-right: 8px;
+    color: #24AC4A;
+  }
+  .section-2-content li{
+    font-size: 15px;
+    color: #000;
+    list-style-type: none;
+    margin-bottom: 10px;
+  }
+  .section-3-content{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .section-3-content h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #000;
+  }
+  .section-3-content p{
+    font-size: 16px;
+  }
+  .section-3-content li i{
+    margin-right: 8px;
+    color: #24AC4A;
+  }
+  .section-3-content li{
+    font-size: 15px;
+    color: #000;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dfdfdf;
+    list-style-type: none;
+    margin-bottom: 10px;
+  }
+  .dark-nav{
+    background-color: #004977;
+    z-index: 999;
+  }
+  .section-2-image{
+    width: 100%;
+    height: 100%;
+  }
+  .section-2-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .zoho-points{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .zoho-points span{
+    text-align: center;
+    font-weight: 600;
+  }
+  .zoho-points img{
+    width: 50px;
+    height: 50px;
+  }
+  .section-3 h1{
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .section-4 h3{
+    font-size: 40px;
+    font-weight: 600;
+  }
+  .process-container{
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .process-container h3{
+        font-size: 40px;
+        font-weight: 700;
+        color: #000;
+    }
+    .process-container p{
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .model-dropdown::-webkit-scrollbar{
+        display: block;
+    }
+    .process-all{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .process-each{
+        width: 250px;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        height: 250px;
+    }
+    .process-each h5{
+      text-align: center;
+      font-size: 25px;
+      font-weight: 600;
+      color: #062f60;
+    }
+    .each-header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .each-header h1{
+        font-size: 50px;
+        -webkit-text-stroke: 1px rgb(137, 137, 137);
+    color: transparent;
+    letter-spacing: 5px;
+    }
+    .each-circle{
+        width:230px;
+        height: 230px;
+        position: absolute;
+        border: 1px solid #062f60;
+        display: flex;
+        border-radius: 50%;
+        margin-top: -35px;
+        align-items: center;
+        justify-content: center;
+    }
+    .process-each p{
+      position: relative;
+      font-size: 16px;
+      text-align: center;
+      margin-top: 220px;
+    }
+    @media(min-width:320px) and (max-width:480px){
+      .hero{
+        flex-direction: column;
+        height: 80vh;
+      }
+      .hero-content{
+        width: 90%;
+        padding-right: 0;
+      }
+      .nav-links{
+        display: none;
+      }
+      .nav-logo{
+        width: 100%;
+        align-items:center;
+        justify-content: flex-start;
+      }
+      .hero-image{
+        display: none;
+      }
+      .footer{
+        height: auto !important;
+        flex-direction: column !important;
+      }
+      .footer-content{
+        padding-top: 30px !important;
+        padding-left: 1% !important;
+        width: 90% !important;
+        margin-bottom: 30px !important;
+      }
+      .footer-content h2{
+        font-size: 20px !important;
+      }
+      .contact{
+        justify-content: space-between !important;
+      }
+      .contact a{
+        margin-right: 0px !important;
+      }
+      .footer-form{
+        width: 90% !important;
+        height: auto;
+        padding-bottom: 30px !important;
+      }
+      .process-all{
+            height: auto;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .process-container{
+            height: auto;
+        }
+        .process-each{
+        width:150px;
+        height: 180px;
+    }
+    .each-circle h5{
+      font-size: 20px;
+    }
+    .each-circle{
+    width: 140px;
+    height: 140px;
+    }
+    .process-container p{
+        font-size: 13px;
+        text-align: center;
+    }
+    .process-each p{
+      display: none;
+    }
+    .mobile-register{
+        display:block;
+        font-size:20px;
+        color:#062f60;
+    }
+    .lap-register{
+        display:none;
+    }
+    .popup{
+        width:90% !important;
+        height:auto ;
+    }
+    .contact-form-popup input{
+        height:45px;
+        width:280px !important;
+    }
+    .contact-form-popup textarea{
+        height:45px;
+        width:280px !important;
+    }
+    .contact-form-popup button{
+        height:45px;
+        /*margin-top:15px;*/
+        width:280px !important;
+    }
+    }
+</style>
+<body>
+  <div class="navbar" id="nav">
+    <div class="nav-logo">
+      <img src="img/y&r-logo (1).png" alt="">
+      <span>Young & Right <br> Tax Consultancy Services</span>
+    </div>
+    <div class="nav-links">
+      <a href=""><i class="fa-solid fa-envelope"></i>info@youngandright.ae</a>
+      <a href=""><i class="fa-solid fa-phone"></i>+971 56 709 2500</a>
+    </div>
+  </div>
+    <div class="hero">
+      <div class="hero-image">
+        <img src="img/man-preview.png" alt="">
+      </div>
+      <div class="hero-content">
+        <h1 class="mb-4">Welcome to <br> <span>Young & Right Tax Consultancy</span></h1>
+        <h3 class="mb-4">Enhance Your Accounting Experience with Zoho Books </h3>
+        <img class="mb-5" src="img/zoho.webp" alt="">
+        <button id="open-popup">Get Free Consultation</button>
+      </div>
+    </div>
+    <div class="container section-1 pt-4 pb-4">
+      <div class="row gx-2 gy-3">
+        <div class="col-md-2 col-6">
+          <div class="points-section-1">
+            <h3>Increased
+              Efficiency</h3>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="points-section-1">
+            <h3> Improved Customer
+              Relationships</h3>
+          </div>
+        </div>
+        <div class="col-md-2 col-6">
+          <div class="points-section-1">
+            <h3> Enhanced
+              Productivity</h3>
+          </div>
+        </div>
+        <div class="col-md-2 col-6">
+          <div class="points-section-1">
+            <h3> Resource
+              Management</h3>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="points-section-1">
+            <h3>Real-time Insights with
+              Dashboard & Analytics</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container section-2 mt-5">
+      <div class="row gx-3 gy-3">
+        <div class="col-md-6">
+          <div class="section-2-content">
+            <h1 class="mb-3">Why Opt for Zoho Books?</h1>
+            <p> All-Inclusive Financial Management Automated Invoicing: Generate and dispatch professional invoices in just a few clicks. Personalize templates to reflect your brand and automate recurring billing for consistent revenue. Expense Tracking: Effortlessly monitor and categorize your expenses. Attach receipts and keep an eye on spending to adhere to your budget. Financial Reports: Obtain crucial insights through real-time financial reports. From profit and loss statements to balance sheets, stay updated on your business's financial status.</p>
+            <li><i class="fa-regular fa-circle-check"></i><b>Simplified Collaboration Multi-User Access:</b> Invite team members to work together on financial tasks. Assign roles and permissions to ensure secure and effective collaboration. Client Portal: Offer clients access to a secure portal where they can view and pay invoices, as well as track their account status. </li>
+            <li><i class="fa-regular fa-circle-check"></i><b>Smooth Integration Connect with Your Preferred Applications:</b> Integrate Zoho Books with other Zoho applications and popular third-party services like PayPal, Stripe, and G Suite to enhance your workflow. Bank Reconciliation: Automatically import and reconcile transactions from your bank accounts, saving time and minimizing errors. </li>
+            <li><i class="fa-regular fa-circle-check"></i><b>Mobile Accessibility Manage Finances on the Go:</b> Oversee your finances from anywhere using Zoho Books’ mobile app. Send invoices, track expenses, and access reports directly from your smartphone. </li>
+            <li><i class="fa-regular fa-circle-check"></i><b>Compliance and Security Tax Compliance:</b> Ensure adherence to local tax regulations with built-in VAT features and effortlessly generate tax reports. </li>
+              <li><i class="fa-regular fa-circle-check"></i><b>Data Security:</b> Your financial information is safeguarded with advanced security measures and regular backups. Begin Your Journey Today! Revolutionize the way you manage your business finances.</li>
+          </div>
+        </div>
+        <div class="col-md-6">
+            <div class="section-2-image">
+            <img src="https://www.theforage.com/blog/wp-content/uploads/2022/11/accounting-equation-1.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container section-3 pt-5 pb-3">
+      <h1 class="text-center mb-5">Zoho Partner in Dubai & UAE's Best Zoho One Consultant</h1>
+      <div class="row gx-2 gy-3">
+        <div class="col">
+          <div class="zoho-points">
+            <img class="mb-2" src="img/book.png" alt="">
+            <span>Zoho Books</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="zoho-points">
+            <img class="mb-2" src="img/inventory.png" alt="">
+            <span>Zoho Inventory</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="zoho-points">
+            <img class="mb-2" src="img/bill.png" alt="">
+            <span>Zoho Expense</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="zoho-points">
+            <img class="mb-2" src="img/receipt.png" alt="">
+            <span>Zoho Billing</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="zoho-points">
+            <img class="mb-2" src="img/crm.png" alt="">
+            <span>Zoho CRM</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="zoho-points">
+            <img class="mb-2" src="img/advertising.png" alt="">
+            <span>Zoho Social</span>
+          </div>
+        </div>
+        <div class="col">
+          <div class="zoho-points">
+            <img class="mb-2" src="img/megaphone.png" alt="">
+            <span>Zoho Campaign</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container section-2 mt-5 pb-4">
+      <div class="row gx-4 gy-3">
+        <div class="col-md-6">
+          <div class="section-2-image">
+          <img src="https://kahedu.edu.in/n/wp-content/uploads/2023/10/Auditing-Excellence_-The-art-of-Assurance-in-B-Com-Professional-accounting-scaled.jpg" alt="">
+        </div>
+      </div>
+        <div class="col-md-6">
+          <div class="section-3-content">
+            <h1 class="mb-3">At Young & Right - Zoho Authorized Partner</h1>
+            <p>Take your business to the next level with our Zoho CRM integration. Our seamless implementation helps you manage client relationships more effectively, track your financial health, and streamline your operations</p>
+            <li><i class="fa-regular fa-circle-check"></i><b>Centralized Client Management:</b> Keep all your client data in one place for easy access and management.</li>
+            <li><i class="fa-regular fa-circle-check"></i><b>Automated Workflows:</b> Save time and reduce errors with automated processes for invoicing, reminders, and reporting.</li>
+            <li><i class="fa-regular fa-circle-check"></i><b>Advanced Analytics:</b> Make data-driven decisions with Zoho CRM's comprehensive analytics and reporting tools.</li>
+            <li><i class="fa-regular fa-circle-check"></i><b>Customizable Dashboards:</b> Get real-time insights into your tax consultancy's performance with customizable dashboards.</li>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="process-container mb-5">
+      <h3>Our Process</h3>
+      <div class="process-all">
+      <div class="process-each">
+      <div class="each-header">
+          <h1>01</h1>
+      </div>
+      <div class="each-circle">
+      <h5>Share <br>
+        Your Details</h5>
+      </div>
+      <p>Fill out our inquiry form with your business information and specific needs.</p>
+      </div>
+      <div class="process-each">
+          <div class="each-header">
+              <h1>02</h1>
+          </div>
+          <div class="each-circle">
+          <h5>Free <br>
+            Consultation</h5>
+          </div>
+          <p>Our team will analyse your business processes and objectives.</p>
+      </div>
+      <div class="process-each">
+          <div class="each-header">
+              <h1>03</h1>
+          </div>
+          <div class="each-circle">
+          <h5>Customized <br>
+            Strategy</h5>
+          </div>
+          <p>We’ll provide a tailored implementation plan and ongoing support.</p>
+      </div>
+      </div>
+      </div>
+      <style>
+        .footer{
+          width: 100%;
+          height: 100vh;
+          background-image:linear-gradient(rgba(0, 59, 186, 0.6),rgba(0, 59, 186, 0.6)), url(https://platinumlist.net/guide/wp-content/uploads/2022/12/bestviews-dubai-1-scaled.jpg);
+          background-position: center;
+          background-size: cover;
+          margin-top: 100px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+        .footer-content{
+          width: 50%;
+          padding-left: 3%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+        }
+        .footer-form{
+          width: 50%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .footer .logo{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+        }
+        .footer .logo h3{
+          color: #fff;
+          font-size: 20px;
+          font-weight: 700;
+        }
+        .footer .logo img{
+          width: 80px;
+          height: 80px;
+          margin-right: 10px;
+        }
+        .footer-content h2{
+          color: #fff;
+          font-weight: 700;
+          font-size: 30px;
+        }
+        .footer-content p{
+          font-size: 16px;
+          color: #fff;
+          border-bottom: 1px solid #fff;
+          padding-bottom: 15px;
+        }
+        .contact{
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+        .contact a{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+        }
+        .contact a{
+          color: #fff;
+          text-decoration: none;
+          margin-right: 50px;
+          font-weight: 400;
+        }
+        .contact a span{
+          font-weight: 600;
+        }
+        /* From Uiverse.io by akshat-patel28 */ 
+.form-container {
+  width: 400px;
+  height: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+.lock-icon {
+  font-size: 20px;
+  color: #0e2954;
+}
+.form {
+  width: 100%;
+  height: 100%;
+  padding: 20px 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  box-sizing: border-box;
+  color: #0e2954;
+  position: relative;
+}
+.toggle-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.form-title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.form-sub-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.login-card,
+.password-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 25px;
+  gap: 20px;
+  align-items: flex-end;
+  position: absolute;
+  width: calc(100% - 30px);
+  transition: all 0.3s ease-in-out;
+  bottom: 20px;
+}
+.login-card {
+  left: 15px;
+}
+.password-card {
+  left: 100%;
+}
+.field-container {
+  border: 1px solid #a7a7a7;
+  border-radius: 8px;
+  width: 100%;
+  height: 45px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.input {
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: transparent;
+  position: relative;
+  z-index: 11;
+}
+.placeholder {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #a7a7a7;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  top: 5px;
+  transform: none;
+  font-size: 12px;
+}
+.input:focus,
+.input:not(:placeholder-shown) {
+  height: 68%;
+}
+.btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 8px;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  background: #0e2954;
+  border: none;
+  outline: none;
+}
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.toggle-input:checked ~ .login-card {
+  left: -100%;
+}
+.toggle-input:checked ~ .password-card {
+  left: 15px;
+}
+.popup{
+    background-color:white;
+    width: 45%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    height: auto;
+    top: 50%;
+    left:50%;
+    padding:2%;
+    z-index: 1000;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none;
+    text-align: center;
+}
+.popup-close-button{
+    display: block;
+    position:absolute;
+    top:0;
+    right:0;
+    background-color: transparent;
+    font-size: 40px;
+    color: #062f60;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+    color: white;
+}
+#contact-form input{
+    font-family: "Mukta", sans-serif;
+}
+#contact-form select{
+    font-family: "Mukta", sans-serif;
+}
+.popup a{
+    display: block;
+    width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #0f72e5;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 0;
+}
+.popup-content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.mobile-register{
+    display:none;
+}
+.contact-form-popup{
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contact-form-popup textarea{
+  height: 45px;
+    width: 400px;
+    border:hidden;
+    font-family: "Mukta", sans-serif;
+  font-style: normal;
+    background: none;
+    padding: 10px;
+    border:1px solid #062f60;
+    background-color:white;
+    outline: none;
+    border-radius:10px;
+}
+.contact-form-popup input{
+    height: 45px;
+    width: 400px;
+    border:hidden;
+    font-family: "Mukta", sans-serif;
+  font-style: normal;
+    background: none;
+    padding: 10px;
+    border:1px solid #062f60;
+    background-color:white;
+    outline: none;
+    border-radius:10px;
+}
+.contact-form-popup select{
+        height: 45px;
+    width: 400px;
+    border:hidden;
+    background: none;
+    font-family: "Mukta", sans-serif;
+  font-style: normal;
+    padding: 10px;
+    color:#062f60;
+    border-radius:10px;
+    border:1px solid #062f60;
+    background-color:white;
+    outline: none;
+}
+.contact-form-popup input::placeholder{
+    color: #062f60;
+}
+.contact-form-popup textarea::placeholder{
+    color: #062f60;
+}
+.contact-form-popup button{
+    height: 50px;
+    background-color: #062f60;
+    color: white;
+    font-size: 15px;
+    width: 400px;
+    font-family: "Mukta", sans-serif;
+  font-style: normal;
+    margin-top:15px;
+    border: hidden;
+    font-weight: 700;
+}
+.lap-register{
+    color:#062f60;
+}
+/* From Uiverse.io by LightAndy1 */ 
+/* This is an example, feel free to delete this code */
+.tooltip-container {
+  position: fixed;
+  bottom: 20px;
+  right: 80px;
+  background-color: #f47fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 17px;
+  /*padding: 0.7em 1.8em;*/
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.tooltip-container .borde-back {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: none;
+}
+
+.tooltip-container .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background-color: #24AC4A;
+  cursor: pointer;
+  color: #fff;
+}
+
+.tooltip {
+  position: absolute;
+  top: -2;
+  left: -45px; /* Altere a posição inicial para a esquerda, fora da tela */
+  transform: translateX(
+    -32%
+  ); /* Usando translateX para controlar a transição da esquerda para a direita */
+  width: 160px;
+  height: 52px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.6s;
+  border-radius: 50px;
+  background-color: #24AC4A;
+  background-image: linear-gradient(
+    -90deg,
+    #24AC4A 0%,
+    #24AC4A 75%,
+    #24AC4A 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 16px;
+  color: #fff;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+.tooltip a{
+  text-decoration: none;
+  color: #fff;
+}
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 0.6em;
+  width: 0.6em;
+  right: -0.2em; 
+  top: 50%; 
+  transform: translateY(-50%) rotate(45deg); 
+  background: var(--background);
+}
+
+.tooltip-container:hover .tooltip {
+  left: 100%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  z-index: -10;
+}
+.tooltip-container:hover {
+  transform: translateX(-50px);
+  transition: 0.5s linear;
+}
+
+      </style>
+      <div class="tooltip-container">
+        <span class="tooltip"><a target="_blank" href="https://wa.me/+971567092500">Chat Now</a></span>
+        <span class="text">
+          <div class="borde-back">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+              </svg>
+            </div>
+          </div>
+        </span>
+      </div>
+      
+      <div class="footer">
+        <div class="footer-content">
+          <div class="logo mb-3">
+            <img src="img/y&r-logo (1).png" alt="">
+            <h3>YOUNG AND RIGHT <br> ACCOUNTING AND TAX CONSULTANCY L.L.C</h3>
+          </div>
+          <h2 class="mb-3">Streamline, Enhance, and Grow Your Business with Our Zoho Books Specialists.</h2>
+          <p>API World Tower, Near World Trade Center, Metro Station <br> Dubai, United Arab Emirates</p>
+          <div class="contact">
+            <a href=""><span>Phone</span>+971 56 709 2500</a>
+            <a href=""><span>Contact</span>info@youngandright.ae</a>
+          </div>
+        </div>
+        <div class="footer-form">
+          <div class="form-container">
+            <form class="form">
+              <p class="form-title">Get Your Free</p>
+              <p class="form-sub-title">
+                Zoho Consultation
+              </p>
+                <div class="field-container mb-3 mt-3">
+                  <input placeholder="" class="input" type="text" required/>
+                  <span class="placeholder">Name*</span>
+                </div>
+                <div class="field-container mb-3">
+                  <input placeholder="" class="input" type="email" />
+                  <span class="placeholder">Email*</span>
+                </div>
+                <div class="field-container mb-3">
+                  <input placeholder="" class="input" type="text" />
+                  <span class="placeholder">Mobile*</span>
+                </div>
+                <div class="field-container mb-3">
+                  <textarea placeholder="" class="input" type="text" ></textarea>
+                  <span class="placeholder">Share Your Requirements</span>
+                </div>
+                <button class="btn" type="submit">
+                  <label class="btn-label" for="toggle-checkbox">Submit</label>
+                </button>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+      <div class="popup" id="popup-main">
+        <button class="popup-close-button" id="close">&times;</button>
+        <div class="popup-content" id="popup-content-id">
+            <h3 class="mt-2 mb-2"><b>Get Your Free </b> <br> Zoho Consultation</h3>
+      <form class="contact-form-popup mt-2" id="contact-form-3" action="https://api.web3forms.com/submit" method="POST" onsubmit="return validatecontact3(event)">
+                      <input type="hidden" name="access_key" value="e816549a-434a-4cc8-9768-a1ed1d9a2155">
+                  <input type="hidden" name="subject" id="subject-register-3" value="Consultation Request From Landing Page">
+          <div class="d-flex mb-3 flex-column">
+          <input type="text" name="Fullname" id="fname-3" class="" placeholder="Name*" >
+          <span class="error-message" id="fname-error-3"></span>
+          </div>
+          <div class="d-flex mb-3 flex-column">
+          <input type="text" name="email" id="email-3" class="" placeholder="Email*" >
+          <span class="error-message" id="email-error-3"></span>
+          </div>
+          <div class="d-flex mb-3 flex-column">
+            <input type="hidden" id="countryCode-popup" name="CountryCode">
+        <input type="text" name="phone number" id="phone-3" class="" placeholder="Mobile*" >
+        <span class="error-message" id="phone-error-3"></span>
+        </div>
+           <div class="d-flex mb-3 flex-column">
+          <textarea type="text" name="company name" id="company-3" class="" placeholder="Share Your Requirements" ></textarea>
+          <span class="error-message" id="company-error-3"></span>
+          </div>
+          <button type="submit" value="">ENQUIRE NOW</button>
+      </form>
+        </div>
+    </div>
+
+    <script>
+      const nav = document.getElementById('nav');
+
+      function handleScroll() {
+        if (window.scrollY > 50) {
+          nav.classList.add('dark-nav');
+        } else {
+          nav.classList.remove('dark-nav');
+        }
+      }
+
+      window.addEventListener('scroll', handleScroll);
+    </script>
+        <script async>
+          window.addEventListener("load", function(){
+              setTimeout(function(){
+                  document.querySelector(".popup").style.display = "block";
+              }, 5000);
+          });
+      
+          document.querySelector("#close").addEventListener("click", function(){
+              document.querySelector(".popup").style.display = "none";
+          });
+          document.querySelector("#open-popup").addEventListener("click", function(){
+              document.querySelector(".popup").style.display = "block";
+          });
+          document.querySelector("#closesecond").addEventListener("click", function(){
+          document.querySelector(".popup").style.display = "none";
+      });
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"  crossorigin="anonymous" ></script>
+</body>
+</html>

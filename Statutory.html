@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statutory</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+      .home-section-one{
+        height: 80vh;
+        /*background-image: url("{% static '/img/web-bg.jpg' %}");*/
+        /*background-size: cover;*/
+        background-color:#062F60;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .home-section-one-image{
+        width: 50%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content:center;
+    }
+    .home-section-one-image img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+    }
+    .home-section-one-cnt{
+        width: 45%;
+        display: flex;
+        height: 80%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .home-section-one-cnt h1{
+        font-weight: 700;
+        color:white;
+        letter-spacing: 1px;
+    }
+    .home-section-one-cnt h1 span{
+        font-weight: bold;
+    }
+    .home-section-one-cnt span{
+        color: white;
+    }
+    .home-section-one-cnt button{
+        background-color: white;
+        color: #062F60;
+        border-radius: 5px;
+        border: hidden;
+        font-size: 14px;
+        font-weight:650;
+        width: 180px;
+        height: 40px;
+
+    }
+    .section-main-p-2 a{
+        text-decoration: none;
+        color: white;
+    }
+    .section-main-p-2{
+        color:white;
+        font-weight:650;
+    }
+    .section-main-p-2 .last-span{
+        color:aquamarine;
+    }
+    .section-main-p-2 i{
+        margin-right:5px;
+        margin-left:5px;
+        color: aquamarine;
+    }
+    .best-accounting-cnt h1{
+        font-weight: 700;
+        color: #062F60;
+    }
+    .best-accounting-cnt p i{
+        margin-right: 10px;
+        color: green;
+    }
+    .accounting-img{
+        width: 100%;
+        height: 50vh;
+    }
+    .accounting-img img{
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+    }
+    .why-choose-us h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .why-choose-us h5{
+        font-weight: 650;
+        margin-bottom: 20px;
+    }
+    .why-choose-us h5 i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us p{
+        margin-bottom: 30px;
+    }
+    .benefit-points{
+        height: auto;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .benefit-points-open{
+        height: auto;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .collapse{
+        width: 100%;
+    }
+    .benefits h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .benefit-points span{
+        font-weight: 700;
+        font-size: 18px;
+        opacity: 0.8;
+        letter-spacing: 1px;
+    }
+    .benefit-points i{
+        font-size: 22px;
+        color: rgb(5, 172, 5);
+    }
+    .what-is-internal h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: "Lato", sans-serif;
+  font-style: normal;
+    }
+    .approach h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: "Lato", sans-serif;
+  font-style: normal;
+    }
+    .services h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: "Lato", sans-serif;
+  font-style: normal;
+    }
+    .services p{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .services p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+
+    }
+    .audit h1{
+        color: #062F60;
+        font-weight: 700;
+        font-size: 30px;
+    }
+    .audit p{
+        font-size: 18px;
+    }
+    .audit p i{
+        margin-left: 10px;
+        margin-right: 10px;
+        color: rgb(5, 205, 5);
+    }
+    @media(min-width:320px) and (max-width:480px){
+        .home-section-one{
+            flex-direction: column;
+            height: 100vh;
+        }
+        .home-section-one-cnt{
+            width: 90%;
+            height: 50%;
+            justify-content: space-evenly;
+        }
+        .home-section-one-image{
+            width: 90%;
+            height: 50%;
+        }
+    }
+</style>
+<body>
+<div class="home-section-one">
+<div class="home-section-one-cnt">
+<h1>STATUTORY AUDIT FOR COMPANY IN UAE</h1>
+<span>Y&R ensures compliance with legal regulations and provides assurance on financial statements' accuracy."</span>
+<a href="#free"><button>FREE CONSULTATION</button></a>
+<p class="section-main-p-2 "><a href="">Home</a><i class="fa-solid fa-angles-right"></i><a href="">Auditing</a><i class="fa-solid fa-angles-right"></i><span class="last-span">Internal Audit</span></p>
+</div>
+<div class="home-section-one-image">
+    <img src="https://fobel.in/wp-content/uploads/2022/03/fobel-accounting.png">
+</div>
+</div>
+
+<div class="container mt-5 mb-5 what-is-internal">
+<h1 class="mb-4">What Is Statutory Audit</h1>
+<p>Statutory auditing refers to the examination of a company's financial records and statements by an independent auditor to ensure accuracy and compliance with relevant laws and regulations. These audits are required by law or statute, hence the term "statutory." The purpose of statutory audits is to provide assurance to stakeholders, such as shareholders, creditors, and regulators, regarding the reliability of the financial information presented by the company.</p>
+<p>During a statutory audit, the auditor assesses the company's financial statements, internal controls, accounting policies, and adherence to accounting standards. The audit process involves gathering evidence, testing transactions, and verifying the accuracy and completeness of financial records. The auditor then issues an audit report, expressing their opinion on whether the financial statements present a true and fair view of the company's financial position and performance in accordance with applicable accounting standards and legal requirements.</p>
+</div>
+
+<div class="container mt-5 mb-5 what-is-internal">
+    <h1 class="mb-4">Who is qualified to conduct a statutory audit?</h1>
+    <p>Since statutory audits are mandated by a statute or law, it needs to be conducted by professionals who know the governing bodies' principles and ethic. Y&R performs statutory audit to ensure that the account statements of the company reflect fair and accurate picture of the current financial position on the date of the balance sheet.</p>
+    </div>
+
+    <div class="container mb-5 audit">
+        <h1 class="mb-4">Documents Required For The Statutory Audit</h1>
+        <p class="mb-3"><b>Financial Statements <i class="fa-solid fa-hand-point-right"></i></b>Balance sheet, profit and loss statement, cash flow statement, and notes to the financial statements.</p>
+        <p class="mb-3"><b>Accounting Records <i class="fa-solid fa-hand-point-right"></i></b>General ledger, subsidiary ledgers, journals, and supporting documentation for transactions.</p>
+        <p class="mb-3"><b>Bank Statements and Reconciliation<i class="fa-solid fa-hand-point-right"></i></b>Bank statements and reconciliations to ensure accuracy of cash balances.</p>
+        <p class="mb-3"><b>Invoices and Receipts <i class="fa-solid fa-hand-point-right"></i></b>Purchase invoices, sales invoices, receipts, and other supporting documents for transactions. </p>
+        <p class="mb-3"><b>Fixed Assets Register <i class="fa-solid fa-hand-point-right"></i></b>Details of all fixed assets owned by the company, including acquisitions, disposals, and depreciation.</p>
+        <p class="mb-3"><b>Inventory Records <i class="fa-solid fa-hand-point-right"></i></b>Inventory count records, valuation methods, and adjustments for obsolete or damaged inventory.</p>
+        <p class="mb-3"><b>Debt and Equity Instruments <i class="fa-solid fa-hand-point-right"></i></b>Details of loans, borrowings, equity investments, and related agreements.</p>
+        <p class="mb-3"><b>Tax Records<i class="fa-solid fa-hand-point-right"></i></b>Tax returns, tax calculations, correspondence with tax authorities, and documentation of tax positions.</p>
+
+    </div>
+    
+<div class="container why-choose-us">
+    <h1 class="mb-4">Benefits of Statutory Audit in Dubai</h1>
+    <div class="d-flex flex-column">
+<h5><i class="fa-solid fa-circle-arrow-right"></i>Compliance :</h5>
+<p class="">Dubai has strict regulatory requirements for companies, and statutory audits ensure compliance with local laws and regulations, including the UAE Commercial Companies Law and International Financial Reporting Standards (IFRS). Compliance with these regulations enhances the company's reputation and trustworthiness.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Legal Requirements :</h5>
+        <p>  Companies in Dubai are often required by law to conduct statutory audits. Compliance with these requirements avoids penalties, fines, or legal consequences, ensuring the company's operations remain uninterrupted.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Enhanced Credibility :</h5>
+        <p>A statutory audit conducted by an independent, reputable audit firm adds credibility to a company's financial statements. It reassures investors, lenders, and other stakeholders about the accuracy and reliability of the financial information presented.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Risk Identification :</h5>
+        <p>Statutory audits help identify financial risks and weaknesses in internal controls. By evaluating the company's financial systems and processes, auditors can highlight areas for improvement, reducing the risk of fraud, errors, and mismanagement.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Financial Performance Evaluation :</h5>
+        <p>Through the audit process, companies gain insights into their financial performance, profitability, and efficiency. This information can be used to make informed business decisions, improve operations, and optimize financial resources.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Stakeholder Confidence :</h5>
+        <p>Statutory audits instill confidence in stakeholders, including shareholders, creditors, customers, and regulatory authorities. Transparent financial reporting demonstrates the company's commitment to accountability, transparency, and good corporate governance practices.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Facilitates Business Growth:  :</h5>
+        <p>Reliable financial statements resulting from statutory audits can facilitate access to capital, loans, or investment opportunities. Lenders and investors are more likely to support companies with audited financials, as it reduces their risk exposure.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Prevents Fraud and Mismanagement :</h5>
+        <p> By conducting thorough examinations of financial records, statutory audits help detect and deter fraudulent activities, errors, or mismanagement. This protects the interests of shareholders and ensures the integrity of the company's financial reporting.</p>
+    </div>
+    <p>Overall, internal auditing adds value to organizations by promoting sound governance, managing risks, improving operational performance, and enhancing stakeholder confidence. It is a critical function that supports organizational success and sustainability in today's complex business environment.</p>
+</div>
+
+
+
+
+<div class="container mt-5 why-choose-us">
+    <h1 class="mb-4">Why Choose Us? </h1>
+    <div class="d-flex flex-column">
+<h5><i class="fa-solid fa-arrow-right-long"></i>Experience and Expertise  :</h5>
+<p class="">Y&R likely has a team of experienced auditors with expertise in conducting statutory audits across various industries. Their knowledge of local regulations and international standards ensures thorough and accurate audit procedures.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-arrow-right-long"></i>Reputation :</h5>
+        <p> Y&R's reputation as a reputable audit firm can enhance the credibility of your company's financial statements. Stakeholders, including investors, lenders, and regulatory authorities, are more likely to trust audited financials from a well-known firm like Y&R.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-arrow-right-long"></i>Tailored Approach  :</h5>
+        <p>Y&R may offer a personalized approach to statutory audit services, taking into account the specific needs and complexities of your business. They can tailor their audit procedures to focus on areas of higher risk or importance to your company's operations.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-arrow-right-long"></i>Value-Added Insights  :</h5>
+        <p>Beyond fulfilling regulatory requirements, Y&R may provide valuable insights and recommendations based on their audit findings. These insights can help improve internal controls, optimize financial processes, and enhance overall business performance.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-arrow-right-long"></i>Global Network  :</h5>
+        <p>If Y&R is part of a larger network or affiliated with international audit firms, they can leverage their global resources and expertise to provide comprehensive audit services, especially for companies with international operations or subsidiaries.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-arrow-right-long"></i>Quality Assurance  :</h5>
+        <p>Y&R likely has robust quality assurance processes in place to ensure the highest standards of audit quality and professionalism. This can give you confidence in the accuracy and reliability of their audit opinions and reports.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-arrow-right-long"></i>Client-Centric Approach :</h5>
+        <p>Y&R may prioritize client satisfaction by maintaining open communication, responding promptly to inquiries, and delivering audit reports in a timely manner. Their client-centric approach can make the audit process smoother and less disruptive to your business operations.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-arrow-right-long"></i>Innovative Tools and Technology :</h5>
+        <p> Y&R may utilize advanced audit tools and technology to streamline audit procedures, enhance data analysis, and improve audit efficiency. This can result in a more thorough and effective audit process while minimizing disruptions to your business.</p>
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"  crossorigin="anonymous" ></script>
+</body>
+</html>

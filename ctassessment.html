@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+      .home-section-one{
+        height: 80vh;
+        /*background-image: url("{% static '/img/web-bg.jpg' %}");*/
+        /*background-size: cover;*/
+        background-color:#062F60;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .home-section-one-image{
+        width: 50%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content:center;
+    }
+    .home-section-one-image img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+    }
+    .home-section-one-cnt{
+        width: 45%;
+        display: flex;
+        height: 70%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .home-section-one-cnt h1{
+        font-weight: 500;
+        color:white;
+        letter-spacing: 1px;
+    }
+    .home-section-one-cnt h1 span{
+        font-weight: bold;
+    }
+    .home-section-one-cnt span{
+        color: white;
+    }
+    .home-section-one-cnt button{
+        background-color: white;
+        color: #062F60;
+        border-radius: 5px;
+        border: hidden;
+        font-size: 14px;
+        font-weight:650;
+        width: 180px;
+        height: 40px;
+
+    }
+    .section-main-p-2{
+        color:white;
+        font-weight:650;
+    }
+    .section-main-p-2 .last-span{
+        color:aquamarine;
+    }
+    .section-main-p-2 i{
+        margin-right:5px;
+        margin-left:5px;
+        color: aquamarine;
+    }
+    .section-main-p-2 a{
+        text-decoration: none;
+        color: white;
+    }
+    .best-accounting-cnt h1{
+        font-weight: 700;
+        color: #062F60;
+    }
+    .best-accounting-cnt p i{
+        margin-right: 10px;
+        color: green;
+    }
+    .accounting-img{
+        width: 100%;
+        height: 50vh;
+    }
+    .accounting-img img{
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+    }
+    .services h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .services p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .why-choose-us h5{
+        font-weight: 650;
+        margin-bottom: 20px;
+        color: black;
+    }
+    .why-choose-us p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us p{
+        margin-bottom: 30px;
+    }
+    .benefit-points{
+        height: auto;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .benefit-points-open{
+        height: auto;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .collapse{
+        width: 100%;
+    }
+    .benefits h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .benefit-points span{
+        font-weight: 700;
+        font-size: 18px;
+        opacity: 0.8;
+        letter-spacing: 1px;
+    }
+    .benefit-points i{
+        font-size: 22px;
+        color: rgb(5, 172, 5);
+    }
+    .processes h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .process-card{
+        width: 80%;
+        margin: auto;
+        height: 180px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    .process-card img{
+        width: 50px;
+        height: 50px;
+    }
+  
+    .how-we h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .how-we p i{
+        color: rgb(5, 172, 5);
+        margin-right: 10px;
+
+    }
+    .tax h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .tax p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .scenario h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .scenario p{
+        font-size: 20px;
+        font-weight: 650;
+    }
+    .scenario p img{
+        margin-right: 10px;
+        width: 25px;
+        height: 25px;
+    }
+    .points p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .aspects h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+    }
+    .aspects-card{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        height: 150px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        justify-content: space-evenly;
+    }
+    .aspects-card h3{
+        font-size: 20px;
+        text-align: center;
+    }
+    .aspects-card p{
+        text-align: center;
+    }
+
+    @media(min-width:320px) and (max-width:480px){
+        .home-section-one{
+            flex-direction: column;
+            height: 100vh;
+        }
+        .home-section-one-cnt{
+            width: 90%;
+            height: 50%;
+            justify-content: space-evenly;
+        }
+        .home-section-one-image{
+            width: 90%;
+            height: 50%;
+        }
+    }
+</style>
+<body>
+<div class="home-section-one">
+<div class="home-section-one-cnt">
+<h1>CORPORATE TAX ASSESSMENT SERVICES</h1>
+<span>Corporate Tax Registration In Dubai That Are Impeccable To Ensure</span>
+<a href="#free"><button>FREE CONSULTATION</button></a>
+<p class="section-main-p-2 "><a href="">Home</a><i class="fa-solid fa-angles-right"></i><a href="">Advisory&Consulting</a><i class="fa-solid fa-angles-right"></i><span class="last-span">Corporate Tax Assessment</span></p>
+</div>
+<div class="home-section-one-image">
+    <img src="img/advisory.png">
+</div>
+</div>
+<div class="container mt-5 mb-5 points">
+    <p><i class="fa-solid fa-square-arrow-up-right"></i>Corporate Tax Impact Assessment is a systematic process that considers the implications of corporate tax for businesses and allows for necessary changes both within and outside the business unit or group before it's too late. Y&R boasts a team of skilled corporate tax specialists who can efficiently provide corporate tax impact assessment services in the UAE to ensure tax compliance.</p>
+   <p><i class="fa-solid fa-square-arrow-up-right"></i>Y&R offers corporate tax assessment services in the UAE to analyze impacts, document requirements, and ensure compliance for making informed tax decisions. Our expert corporate tax advisors handle Corporate Tax matters, assisting clients with all aspects of Corporate Tax to remain compliant with tax regulations.</p>
+   <p><i class="fa-solid fa-square-arrow-up-right"></i>As the UAE and its businesses gear up for the implementation of Corporate Tax in June 2023, the Corporate Tax policy aims to align with global best practices and reduce business risks, setting the standard rate at 9% while offering 0% tax on profits up to AED 375,000 to support small businesses and startups, making it one of the most competitive policies worldwide.</p>
+    </div>
+
+    <div class="container mt-5 mb-5 tax">
+        <h1 class="mb-3">What Is Corporate Tax Assessment in the UAE?</h1>
+        <p class="">Corporate tax assessment determines the amount a company must pay to the government based on its revenue. This process involves income calculation, tax rate application, and consideration of any eligible deductions or exemptions.</p>
+    </div>
+
+    <div class="container mt-5 mb-5 tax">
+        <h1 class="mb-3">Corporate Tax Impact Assessment in the UAE</h1>
+        <p class="">Corporate Tax Impact Assessment in the UAE evaluates the potential impact of tax laws on a company's financial performance. It involves analyzing the company's current tax position, identifying risks and opportunities, and recommending strategies for tax efficiency.</p>
+    </div>
+
+<div class="container aspects mb-5">
+    <h1 class="mb-5">Key Aspects of Corporate Tax Impact Assessment in the UAE</h1>
+    <div class="row gx-4 gy-4">
+        <div class="col-md-3">
+            <div class="aspects-card p-3">
+            <h3>Tax compliance</h3>
+            <p>Ensuring compliance with UAE tax laws and regulations.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="aspects-card p-3">
+            <h3>Tax planning </h3>
+            <p>Identifying opportunities to minimize tax liabilities.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="aspects-card p-3">
+            <h3>Transfer pricing </h3>
+            <p>Evaluating transfer pricing policies for compliance.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="aspects-card p-3">
+            <h3>International tax considerations </h3>
+            <p>Analyzing cross-border transactions for tax compliance.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="aspects-card p-3">
+            <h3>Business structures</h3>
+            <p> Analyzing and optimizing business structures for tax benefits.</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="aspects-card p-3">
+            <h3>Tax incentives and exemptions</h3>
+            <p> Assessing eligibility for tax incentives.</p>
+            </div>
+        </div>
+    </div>
+    <p class="mt-4">Our Corporate Tax advisors in Dubai can assist in devising the best financial plan to navigate UAE Corporate Tax implications effectively.</p>
+</div>
+
+<div class="container mt-5 mb-4 tax">
+    <h1 class="mb-3">Document Assessment for Corporate Tax in UAE</h1>
+    <p class="">Businesses must maintain financial records to comply with UAE tax requirements, as failure to do so may lead to significant penalties. Y&R's Corporate Tax Advisors can guide you through compliance requirements and help organize necessary documents.</p>
+</div>
+<div class="container mt-5 mb-4 tax">
+    <h1 class="mb-3">Corporate Tax Compliance Assessment in UAE</h1>
+    <p class="">The UAE's corporate tax regime operates on self-assessment, requiring accurate tax returns and compliance with the law. FTA may review filed tax returns and provide assessments, with opportunities for taxpayers to appeal adjustments to ensure compliance.</p>
+</div>
+<div class="container mt-5 mb-5 tax">
+    <h1 class="mb-3">Corporate Tax Assessment Services in UAE</h1>
+    <p class="mb-3">Y&R's team of Corporate Tax consultants in Dubai specializes in assessing tax outcomes, evaluating eligibility for Corporate Tax, and suggesting exemptions for mainland, free zone, and offshore businesses. Our premium corporate tax services assist with CT registration, filing tax returns, ensuring compliance, and protecting against fines or penalties.</p>
+    <p>For any inquiries on Corporate Tax Assessment, Y&R is here to assist you anytime, anywhere!</p>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"  crossorigin="anonymous" ></script>
+</body>
+</html>

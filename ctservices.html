@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate service</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+      .home-section-one{
+        height: 80vh;
+        /*background-image: url("{% static '/img/web-bg.jpg' %}");*/
+        /*background-size: cover;*/
+        background-color:#062F60;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .home-section-one-image{
+        width: 50%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content:center;
+    }
+    .home-section-one-image img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+    }
+    .home-section-one-cnt{
+        width: 45%;
+        display: flex;
+        height: 80%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .home-section-one-cnt h1{
+        font-weight: 500;
+        color:white;
+        letter-spacing: 1px;
+    }
+    .home-section-one-cnt h1 span{
+        font-weight: bold;
+    }
+    .home-section-one-cnt span{
+        color: white;
+    }
+    .home-section-one-cnt button{
+        background-color: white;
+        color: #062F60;
+        border-radius: 5px;
+        border: hidden;
+        font-size: 14px;
+        font-weight:650;
+        width: 180px;
+        height: 40px;
+
+    }
+    .section-main-p-2{
+        color:white;
+        font-weight:650;
+    }
+    .section-main-p-2 .last-span{
+        color:aquamarine;
+    }
+    .section-main-p-2 i{
+        margin-right:5px;
+        margin-left:5px;
+        color: aquamarine;
+    }
+    .section-main-p-2 a{
+        text-decoration: none;
+        color: white;
+    }
+    .best-accounting-cnt h1{
+        font-weight: 700;
+        color: #062F60;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .best-accounting-cnt p i{
+        margin-right: 10px;
+        color: green;
+    }
+    .accounting-img{
+        width: 100%;
+        height: 50vh;
+    }
+    .accounting-img img{
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+    }
+    .services h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .services p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .why-choose-us h5{
+        font-weight: 650;
+        margin-bottom: 20px;
+        color: black;
+    }
+    .why-choose-us h5 i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us p{
+        margin-bottom: 30px;
+    }
+    .benefit-points{
+        height: auto;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .benefit-points-open{
+        height: auto;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .collapse{
+        width: 100%;
+    }
+    .benefits h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .benefit-points span{
+        font-weight: 700;
+        font-size: 18px;
+        opacity: 0.8;
+        letter-spacing: 1px;
+    }
+    .benefit-points i{
+        font-size: 22px;
+        color: rgb(5, 172, 5);
+    }
+    .processes h1{
+        font-weight: 700;
+        font-size: 30px;
+        color: #062F60;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .process-card{
+        width: 80%;
+        margin: auto;
+        height: 180px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    .process-card img{
+        width: 50px;
+        height: 50px;
+    }
+    .payment-package{
+        height: auto;
+        width: 100%;
+        background-color: #e6f7ff;
+    }
+    .payment-card{
+        width: 100%;
+        height: auto;
+        display: flex;
+        padding-bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        background-color: white;
+        justify-content: space-evenly;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    }
+    .payment-card-plan{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding:30px;
+        border-bottom-style: dashed;
+border-bottom-color: rgb(158, 157, 157);
+border-bottom-width: 1px;
+    }
+    .payment-header{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .payment-card-plan h1{
+        text-align: center;
+        color: rgb(5, 172, 5);
+        font-size: 35px;
+        font-weight: 400;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .payment-card-plan h1 span{
+        font-weight: 800;
+    }
+    .payment-card-plan h3{
+        font-size: 20px;
+        font-weight: 650;
+    }
+    .package-details{
+        width: 90%;
+        padding: 10px;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-direction: column;
+        display: flex;
+    }
+    .package-details h5{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .package-details p i{
+        color: rgb(5, 172, 5);
+        margin-right: 10px;
+    }
+    .package-details p{
+        font-size: 14px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .payment-card a{
+        width: 80%;
+    }
+    .payment-card button{
+        height: 40px;
+        width: 100%;
+        border: hidden;
+        transition:  all 0.3s ease;
+        border-radius: 5px;
+        color: white;
+        background-color: rgb(5, 172, 5);
+        font-weight: 700;
+    }
+    .payment-card:hover{
+        cursor: pointer;
+        background-image: linear-gradient(to bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    }
+    .payment-card:hover .payment-card-plan h1{
+        color: white;
+    }
+    .payment-card:hover .payment-card-plan{
+        border-bottom-color: white;
+    }
+    .payment-card:hover .package-details p,h5{
+        color: white;
+    }
+    .payment-card:hover .payment-card-plan h3{
+        color: white;
+    }
+    .payment-card:hover button{
+        background-color: white;
+        color: rgb(5, 172, 5);
+    }
+    .how-we h1{
+        font-weight: 700;
+        font-size: 30px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: #062F60;
+    }
+    .how-we p i{
+        color: rgb(5, 172, 5);
+        margin-right: 10px;
+
+    }
+    @media(min-width:320px) and (max-width:480px){
+        .home-section-one{
+            flex-direction: column;
+            height: 100vh;
+        }
+        .home-section-one-cnt{
+            width: 90%;
+            height: 50%;
+            justify-content: space-evenly;
+        }
+        .home-section-one-image{
+            width: 90%;
+            height: 50%;
+        }
+    }
+</style>
+<body>
+<div class="home-section-one">
+<div class="home-section-one-cnt">
+<h1><span>Corporate Tax in</span> <br>Dubai, UAE</h1>
+<span>Corporate Tax Registration In Dubai That Are Impeccable To Ensure</span>
+<a href="#free"><button>FREE CONSULTATION</button></a>
+<p class="section-main-p-2 "><a href="">Home</a><i class="fa-solid fa-angles-right"></i><a href="">Advisory&Consulting</a><i class="fa-solid fa-angles-right"></i><span class="last-span">Corporate Tax Services</span></p>
+</div>
+<div class="home-section-one-image">
+    <img src="img/advisory.png">
+</div>
+</div>
+<div class="container mt-5 mb-5">
+    <div class="row gx-4">
+        <div class="col-md-5">
+    <div class="accounting-img">
+        <img src="https://imageio.forbes.com/specials-images/imageserve/63e3b78420923ddf13db7363/Accountant-working-with-US-tax-forms/960x0.jpg?height=474&width=711&fit=bounds" alt="">
+    </div>
+        </div>
+        <div class="col-md-7">
+            <div class="best-accounting-cnt">
+    <h1 class="mb-4">What is Corporate Tax in UAE?</h1>
+    <p>Corporate tax (CT) is a direct tax imposed on the profits of corporations and other entities derived from their business activities. In some jurisdictions, Corporate Tax is also known as "Corporate Income Tax (CIT)" or "Business Profits Tax".</p>
+   <p>Recently, on 31 January 2022, the tax landscape in the region underwent a significant change as the United Arab Emirates (UAE) Ministry of Finance (MoF) announced the introduction of a new federal corporate tax (CT) system. This system will come into effect for financial years starting on or after 1 June 2023. Apart from Bahrain, the UAE has implemented the lowest corporate income tax rate in the GCC region, set at a standard rate of 9%.</p>
+    </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <p>Businesses in the UAE require corporate tax services to ensure compliance, take advantage of tax benefits, mitigate risks, streamline processes, and receive expert guidance for strategic tax planning. Engaging professional tax consultants, audit firms, and accounting firms in Dubai can provide significant benefits and contribute to the overall financial success of Corporate Tax Impact Assessment including handling tax and reporting matters.</p>
+    </div>
+
+
+<div class="container mb-5 services">
+    <h1 class="mb-4">Why Corporate Tax Services are Essential in the UAE:</h1>
+    <p><i class="fa-solid fa-arrow-right-long"></i>Businesses in the UAE must adhere to government tax laws and regulations.</p>
+    <p><i class="fa-solid fa-arrow-right-long"></i>Corporate tax rates range from 0% for taxable income up to AED 375,000 to 9% for income exceeding AED 375,000.</p>
+    <p><i class="fa-solid fa-arrow-right-long"></i>Large multinational corporations complying with 'Pillar Two' of the OECD Base Erosion and Profit Shifting initiative face different tax rates.</p>
+    <p><i class="fa-solid fa-arrow-right-long"></i>Corporate tax services assist companies in navigating the complex tax system and ensuring compliance.</p>
+</div>
+
+<div class="container why-choose-us">
+    <h1 class="mb-4">Benefits of utilizing corporate tax services in the UAE:</h1>
+    <div class="d-flex flex-column">
+<h5><i class="fa-solid fa-circle-arrow-right"></i>Compliance</h5>
+<p class=""> Corporate tax services in the UAE help businesses adhere to intricate tax laws and regulations set by the government, preventing penalties and legal complications.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Expertise</h5>
+        <p>
+            In Dubai, Corporate Tax consultants possess deep knowledge and expertise in corporate tax laws, enabling them to offer precise guidance and support in tax planning and preparation.
+            </p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Cost Savings</h5>
+        <p>
+            Through corporate tax services, businesses can uncover possible tax deductions, credits, and incentives, enhancing tax savings and maximizing financial resources.
+            </p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Audit Support</h5>
+        <p>
+            Audit firms in Dubai provide aid during tax audits, ensuring businesses are well-prepared and compliant with tax authorities' requirements.
+            </p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Risk Mitigation</h5>
+        <p> 
+            Internal auditors in Dubai assist in identifying and mitigating tax-related risks, promoting compliance and reducing the potential for financial and reputational damage.
+            </p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Efficiency</h5>
+        <p> Auditing firms in Dubai offer efficient tax management solutions, streamlining tax processes and alleviating the administrative burden on businesses. </p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Strategic Planning</h5>
+        <p> Corporate tax services in the UAE play a crucial role in ensuring businesses adhere to intricate tax laws and regulations, preventing penalties and legal issues. </p>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5 how-we">
+    <h1 class="mb-4">corporate tax advisory in uae:</h1>
+    <p><i class="fa-solid fa-forward"></i>At Y&R, we have a precise understanding of the fact that each business differs in its goals, strategies and various other aspects. Hence, we customize the corporate tax solutions, per the client's requirements. </p>
+    <p><i class="fa-solid fa-forward"></i>Through Y&R corporate tax advisory, our corporate tax consultants in UAE also assist our valuable clients on issues such as Corporate Tax Registration, Filing CT Returns, etc., and explain the updated regulations from the Federal Tax Authority to prevent the payment of CT fines and penalties. </p>
+    <p><i class="fa-solid fa-forward"></i>With our quality services in every aspect, we are highly recommended by clients for all business requirements, especially Corporate Tax Services in the UAE. For assistance or queries related to Corporate Tax, call Y&R Today, or visit our office for more clarifications. </p>
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"  crossorigin="anonymous" ></script>
+</body>
+</html>

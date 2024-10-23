@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taxaudit</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+      .home-section-one{
+        height: 80vh;
+        /*background-image: url("{% static '/img/web-bg.jpg' %}");*/
+        /*background-size: cover;*/
+        background-color:#062F60;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .home-section-one-image{
+        width: 50%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content:center;
+    }
+    .home-section-one-image img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+    }
+    .home-section-one-cnt{
+        width: 45%;
+        display: flex;
+        height: 65%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .home-section-one-cnt h1{
+        font-weight: 700;
+        color:white;
+        letter-spacing: 1px;
+    }
+    .home-section-one-cnt h1 span{
+        font-weight: bold;
+    }
+    .home-section-one-cnt span{
+        color: white;
+    }
+    .home-section-one-cnt button{
+        background-color: white;
+        color: #062F60;
+        border-radius: 5px;
+        border: hidden;
+        font-size: 14px;
+        font-weight:650;
+        width: 180px;
+        height: 40px;
+
+    }
+    .section-main-p-2 a{
+        text-decoration: none;
+        color: white;
+    }
+    .section-main-p-2{
+        color:white;
+        font-weight:650;
+    }
+    .section-main-p-2 .last-span{
+        color:aquamarine;
+    }
+    .section-main-p-2 i{
+        margin-right:5px;
+        margin-left:5px;
+        color: aquamarine;
+    }
+    .best-accounting-cnt h1{
+        font-weight: 700;
+        color: #062F60;
+    }
+    .best-accounting-cnt p i{
+        margin-right: 10px;
+        color: green;
+    }
+    .accounting-img{
+        width: 100%;
+        height: 50vh;
+    }
+    .accounting-img img{
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+    }
+    .why-choose-us h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .why-choose-us h5{
+        font-weight: 650;
+        margin-bottom: 20px;
+    }
+    .why-choose-us h5 i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us p{
+        margin-bottom: 30px;
+    }
+    .benefit-points{
+        height: auto;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .benefit-points-open{
+        height: auto;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .collapse{
+        width: 100%;
+    }
+    .benefits h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .benefit-points span{
+        font-weight: 700;
+        font-size: 18px;
+        opacity: 0.8;
+        letter-spacing: 1px;
+    }
+    .benefit-points i{
+        font-size: 22px;
+        color: rgb(5, 172, 5);
+    }
+    .what-is-internal h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: "Lato", sans-serif;
+  font-style: normal;
+    }
+    .approach h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: "Lato", sans-serif;
+  font-style: normal;
+    }
+    .services h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+        font-family: "Lato", sans-serif;
+  font-style: normal;
+    }
+    .services p{
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .services p i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+
+    }
+    .audit h1{
+        color: #062F60;
+        font-weight: 700;
+        font-size: 30px;
+    }
+    .audit p{
+        font-size: 18px;
+    }
+    .audit p i{
+        margin-left: 10px;
+        margin-right: 10px;
+        color: rgb(5, 205, 5);
+    }
+    .breakdown h1{
+        color: #062F60;
+        font-weight: 700;
+        font-size: 30px;
+    }
+    .breakdown-card{
+        width: 100%;
+        height: 280px;
+        padding: 7%;
+        margin: auto;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .breakdown-card img{
+        width: 70px;
+        height: 70px;
+    }
+    .breakdown-card h3{
+        font-size: 20px;
+    }
+    .breakdown-card p{
+        text-align: center;
+        font-size: 15px;
+    }
+    .benefits-backlog h1 {
+      font-weight: 700;
+      font-size: 30px;
+      color: #062f60;
+      margin-bottom: 20px;
+    }
+    .benefits-backlog h5 {
+      text-align: center;
+    }
+    .benefits-backlog p {
+      text-align: center;
+      font-size: 14px;
+    }
+    .benefits-backlog i {
+      text-align: center;
+      color: rgb(5, 172, 5);
+      margin-bottom: 10px;
+    }
+    .types h1{
+        font-weight: 700;
+      font-size: 30px;
+      color: #062f60;
+    }
+    .type{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .type i{
+        color: rgb(5, 172, 5);
+        margin-right: 10px;
+    }
+    @media(min-width:320px) and (max-width:480px){
+        .home-section-one{
+            flex-direction: column;
+            height: 100vh;
+        }
+        .home-section-one-cnt{
+            width: 90%;
+            height: 50%;
+            justify-content: space-evenly;
+        }
+        .home-section-one-image{
+            width: 90%;
+            height: 50%;
+        }
+    }
+</style>
+<body>
+<div class="home-section-one">
+<div class="home-section-one-cnt">
+<h1>TAX AUDIT</h1>
+<span>A Tax audit in Dubai involves a thorough examination of a company's financial records</span>
+<a href="#free"><button>FREE CONSULTATION</button></a>
+<p class="section-main-p-2 "><a href="{% url 'home' %}">Home</a><i class="fa-solid fa-angles-right"></i><a href="{% url 'audit' %}">Auditing</a><i class="fa-solid fa-angles-right"></i><span class="last-span">Tax Audit</span></p>
+</div>
+<div class="home-section-one-image">
+    <img src="https://fobel.in/wp-content/uploads/2022/03/fobel-accounting.png">
+</div>
+</div>
+
+<div class="container mt-5 mb-5 what-is-internal">
+<p>Tax Audit Services are designed to assist in reviewing taxes and VAT returns effortlessly. Our team of tax auditors guarantees tax compliance and provides a variety of VAT services. As governments aim to stabilize national finances, tax authorities are under pressure to boost tax revenues, with tax audits playing a crucial role. Nonetheless, with adequate preparation and sound advice, the audit procedure can be simplified.</p>
+</div>
+
+<div class="container mb-5 breakdown">
+    <h1 class="mb-4">Here's a breakdown of what it involves:</h1>
+    <div class="row gx-5 gy-3">
+        <div class="col-md-4">
+            <div class="breakdown-card">
+                <img src="img/gvt.png" alt="">
+                <h3>Government Review</h3>
+                <p> A tax audit is essentially an examination of your tax return by the tax authorities to verify the accuracy of your income and deductions.</p>
+
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="breakdown-card">
+                <img src="img/quality.png" alt="">
+                <h3>Compliance Check</h3>
+                <p> The aim is to ensure you've paid the correct amount of tax and complied with all the relevant tax laws.</p>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="breakdown-card">
+                <img src="img/examine.png" alt="">
+                <h3>Record Examination</h3>
+                <p> Y&R will typically review your financial statements, accounting records, and other relevant documents.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5 benefits-backlog">
+    <h1 class="mb-5 ">Objective of Tax Audit</h1>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="d-flex flex-column">
+          <h5>Ensure Compliance </h5>
+          <i class="fa-solid fa-angles-down"></i>
+          <p>Tax audit services aim to verify that your tax filings comply with all the relevant tax laws and regulations. They'll help identify any areas where your return might not be fully aligned and address them proactively.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex flex-column">
+          <h5>Minimize Tax Liability</h5>
+          <i class="fa-solid fa-angles-down"></i>
+          <p>By thoroughly reviewing your records and calculations, tax audit professionals can ensure you haven't missed any deductions or credits you're entitled to. This helps you minimize the amount of tax you owe.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex flex-column">
+          <h5>Smooth Audit Process</h5>
+          <i class="fa-solid fa-angles-down"></i>
+          <p> young&right can guide you through every step of the audit, from understanding the procedures to preparing documentation and interacting with the auditors. This can significantly reduce stress and ensure a smooth experience.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex flex-column">
+          <h5>Reduced Penalties </h5>
+          <i class="fa-solid fa-angles-down"></i>
+          <p>In case any discrepancies are found, young&right can advocate on your behalf and negotiate with the authorities to minimize potential penalties or additional taxes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mb-4 pt-4 types">
+    <h1 class="mb-4">Types of Tax Audit Service</h1>
+    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+      <div class="col-3">
+        <div class="p-3 type">
+            <i class="fa-solid fa-play"></i>VAT Audit
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="p-3 type"><i class="fa-solid fa-play"></i>Excise Tax Audit</div>
+      </div>
+      <div class="col-3">
+        <div class="p-3 type"><i class="fa-solid fa-play"></i>Corporate Tax Audit</div>
+      </div>
+      <div class="col-3">
+        <div class="p-3 type"><i class="fa-solid fa-play"></i>Income Tax Audit</div>
+      </div>
+      <div class="col-3">
+        <div class="p-3 type"><i class="fa-solid fa-play"></i>Sales Tax audit</div>
+      </div>
+      <div class="col-3">
+        <div class="p-3 type"><i class="fa-solid fa-play"></i>Withholding Tax Audit</div>
+      </div>
+      <div class="col-3">
+        <div class="p-3 type"><i class="fa-solid fa-play"></i>Property Tax audit</div>
+      </div>
+    </div>
+  </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"  crossorigin="anonymous" ></script>
+</body>
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outsourcing</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+      .home-section-one{
+        height: 80vh;
+        /*background-image: url("{% static '/img/web-bg.jpg' %}");*/
+        /*background-size: cover;*/
+        background-color:#062F60;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .home-section-one-image{
+        width: 50%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content:center;
+    }
+    .home-section-one-image img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+    }
+    .home-section-one-cnt{
+        width: 45%;
+        display: flex;
+        height: 70%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .home-section-one-cnt h1{
+        font-weight: 700;
+        color:white;
+        letter-spacing: 1px;
+    }
+    .home-section-one-cnt h1 span{
+        font-weight: bold;
+    }
+    .home-section-one-cnt span{
+        color: white;
+    }
+    .home-section-one-cnt button{
+        background-color: white;
+        color: #062F60;
+        border-radius: 5px;
+        border: hidden;
+        font-size: 14px;
+        font-weight:650;
+        width: 180px;
+        height: 40px;
+
+    }
+    .section-main-p-2{
+        color:white;
+        font-weight:650;
+    }
+    .section-main-p-2 .last-span{
+        color:aquamarine;
+    }
+    .section-main-p-2 i{
+        margin-right:5px;
+        margin-left:5px;
+        color: aquamarine;
+    }
+    .best-accounting-cnt h1{
+        font-weight: 700;
+        color: #062F60;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .best-accounting-cnt p i{
+        margin-right: 10px;
+        color: green;
+    }
+    .accounting-img{
+        width: 100%;
+        height: 50vh;
+    }
+    .accounting-img img{
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+    }
+    .why-choose-us h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .why-choose-us h5{
+        font-weight: 650;
+        margin-bottom: 20px;
+    }
+    .why-choose-us h5 i{
+        margin-right: 10px;
+        color: rgb(5, 172, 5);
+    }
+    .why-choose-us p{
+        margin-bottom: 30px;
+    }
+    .benefit-points{
+        height: auto;
+        border-bottom: 1px solid rgb(158, 158, 158);
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .benefit-points-open{
+        height: auto;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .collapse{
+        width: 100%;
+    }
+    .benefits h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .benefit-points span{
+        font-weight: 700;
+        font-size: 18px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        opacity: 0.8;
+        letter-spacing: 1px;
+    }
+    .benefit-points i{
+        font-size: 22px;
+        color: rgb(5, 172, 5);
+    }
+    .process h1{
+        font-weight: 700;
+        font-size: 35px;
+        color: #062F60;
+    }
+    .section-main-p-2 a{
+        text-decoration: none;
+        color: white;
+    }
+ul {
+  --col-gap: 2rem;
+  --row-gap: 2rem;
+  --line-w: 0.25rem;
+  display: grid;
+  grid-template-columns: var(--line-w) 1fr;
+  grid-auto-columns: max-content;
+  column-gap: var(--col-gap);
+  list-style: none;
+  width: min(60rem, 90%);
+  margin-inline: auto;
+}
+
+/* line */
+ul::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 20;
+  background: rgb(225, 225, 225);
+  border-radius: calc(var(--line-w) / 2);
+}
+
+/* columns*/
+
+/* row gaps */
+ul li:not(:last-child) {
+  margin-bottom: var(--row-gap);
+}
+
+/* card */
+ul li {
+  grid-column: 2;
+  --inlineP: 1.5rem;
+  margin-inline: var(--inlineP);
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: min-content min-content min-content;
+}
+
+/* date */
+ul li .date {
+  --dateH: 3rem;
+  height: var(--dateH);
+  margin-inline: calc(var(--inlineP) * -1);
+
+  text-align: center;
+  background-color: var(--accent-color);
+
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+
+  display: grid;
+  place-content: center;
+  position: relative;
+
+  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+}
+
+/* date flap */
+ul li .date::before {
+  content: "";
+  width: var(--inlineP);
+  aspect-ratio: 1;
+  background: var(--accent-color);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
+  position: absolute;
+  top: 100%;
+
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  right: 0;
+}
+
+/* circle */
+ul li .date::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: var(--bgColor);
+  border: 0.3rem solid var(--accent-color);
+  border-radius: 50%;
+  top: 50%;
+
+  transform: translate(50%, -50%);
+  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+}
+
+/* title descr */
+ul li .title,
+ul li .descr {
+  background: var(--bgColor);
+  position: relative;
+  padding-inline: 1.5rem;
+}
+ul li .title {
+  overflow: hidden;
+  padding-block-start: 1.5rem;
+  padding-block-end: 1rem;
+  font-weight: 500;
+}
+ul li .descr {
+  padding-block-end: 1.5rem;
+  font-weight: 300;
+}
+
+/* shadows */
+ul li .title::before,
+ul li .descr::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(4px);
+  transform: translate(-50%, 50%);
+}
+ul li .title::before {
+  bottom: calc(100% + 0.125rem);
+}
+
+ul li .descr::before {
+  z-index: -1;
+  bottom: 0.25rem;
+}
+
+@media (min-width: 40rem) {
+  ul {
+    grid-template-columns: 1fr var(--line-w) 1fr;
+  }
+  ul::before {
+    grid-column: 2;
+  }
+  ul li:nth-child(odd) {
+    grid-column: 1;
+  }
+  ul li:nth-child(even) {
+    grid-column: 3;
+  }
+
+  /* start second card */
+  ul li:nth-child(2) {
+    grid-row: 2/4;
+  }
+
+  ul li:nth-child(odd) .date::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    left: 0;
+  }
+
+  ul li:nth-child(odd) .date::after {
+    transform: translate(-50%, -50%);
+    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  ul li:nth-child(odd) .date {
+    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
+  }
+}
+
+.credits {
+  margin-top: 1rem;
+  text-align: right;
+}
+.credits a {
+  color: var(--color);
+}
+
+    @media(min-width:320px) and (max-width:480px){
+        .home-section-one{
+            flex-direction: column;
+            height: 100vh;
+        }
+        .home-section-one-cnt{
+            width: 90%;
+            height: 50%;
+            justify-content: space-evenly;
+        }
+        .home-section-one-image{
+            width: 90%;
+            height: 50%;
+        }
+        ul li .date{
+            height: 60px;
+            font-size: 14px;
+        }
+    }
+</style>
+<body>
+<div class="home-section-one">
+<div class="home-section-one-cnt">
+<h1>Accounting <br> Outsourcing in Dubai</h1>
+<span>Accurate and Reliable Bookkeeping Services Tailored to your Needs</span>
+<a href="#free"><button>FREE CONSULTATION</button></a>
+<p class="section-main-p-2 "><a href="">Home</a><i class="fa-solid fa-angles-right"></i><a href="">Accounting</a><i class="fa-solid fa-angles-right"></i><span>Accounting Services</span><i class="fa-solid fa-angles-right"></i><span class="last-span">Accounts Payable Outsourcing</span></p>
+</div>
+<div class="home-section-one-image">
+    <img src="https://static.vecteezy.com/system/resources/previews/027/851/280/original/young-asian-woman-professional-entrepreneur-standing-in-office-clothing-isolated-png.png">
+</div>
+</div>
+
+<div class="container mt-5 why-choose-us">
+    <h1 class="mb-4">What is Accounts payable outsourcing & Services we Provide</h1>
+    <p class="mb-4">Accounts payable (AP) outsourcing is a business practice where a company delegates some or all of its accounts payable processes to a third-party service provider. This outsourcing arrangement involves the external management of various AP functions, including invoice processing, vendor management, payment processing, reconciliation, reporting, and other related tasks. Here's a detailed breakdown of accounts payable outsourcing:</p>
+    <div class="d-flex flex-column">
+<h5><i class="fa-solid fa-circle-arrow-right"></i>Invoice Processing :</h5>
+<p class="">AP outsourcing providers handle the receipt, review, coding, and processing of invoices received from vendors. This includes data entry, validation of invoice details against purchase orders or contracts, and routing invoices for approval within the organization's workflow.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Vendor Management:</h5>
+        <p>AP outsourcing involves managing relationships with vendors and suppliers on behalf of the client company. This includes setting up vendor accounts, maintaining vendor databases, responding to vendor inquiries, and resolving payment discrepancies or disputes.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Payment Processing:</h5>
+        <p>Once invoices are approved, AP outsourcing providers facilitate the payment process. This may involve issuing payments via various methods, such as checks, electronic funds transfers (EFT), automated clearing house (ACH) payments, or virtual credit cards. Providers ensure payments are made accurately, securely, and in compliance with payment terms and deadlines.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Reconciliation :</h5>
+        <p>AP outsourcing includes reconciling payments made with invoices and vendor statements to ensure accuracy and completeness. Providers match payments to corresponding invoices, identify discrepancies or errors, and address any outstanding issues to maintain accurate financial records.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Reporting and Analysis:</h5>
+        <p>AP outsourcing providers generate reports and analysis to provide insights into AP performance, trends, and metrics. This includes tracking key performance indicators (KPIs) such as invoice processing time, payment accuracy, aging of payables, and cash flow projections. Reports help identify areas for improvement and inform decision-making.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Compliance and Control :</h5>
+        <p>AP outsourcing providers ensure compliance with internal policies, industry regulations, and statutory requirements related to accounts payable processes. This includes implementing controls, security measures, and audit trails to mitigate risks associated with fraud, errors, and non-compliance.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Technology and Automation:</h5>
+        <p>AP outsourcing leverages advanced technologies, automation tools, and software platforms to streamline AP processes and improve efficiency. This includes electronic invoice processing, workflow automation, data extraction, and integration with accounting systems for seamless data transfer.</p>
+    </div>
+    <div class="d-flex flex-column">
+        <h5><i class="fa-solid fa-circle-arrow-right"></i>Scalability and Flexibility:</h5>
+        <p>AP outsourcing offers scalability to accommodate changes in transaction volumes, business growth, or seasonal demands. Providers can adjust resources and capacity to meet client needs quickly and efficiently, ensuring continuity of service without disruptions.</p>
+    </div>
+</div>
+
+<div class="container mt-5 benefits">
+    <h1 class="mb-4">Benefits of Account Payable Outsourcing</h1>
+    <p>Whether you're a small startup or a large corporation, AP outsourcing can deliver tangible benefits in terms of cost savings, efficiency gains, scalability, and risk mitigation. Consider partnering with a reputable outsourcing provider to streamline your AP processes and unlock the full potential of your financial operations.</p>
+<div class="benefit-points">
+    <div class="benefit-points-open">
+        <span>Cost Savings</span>
+        <a data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+        </div>
+        <div class="collapse mt-2 mb-3" id="collapseExample1">
+            <p> Outsourcing AP can lead to significant cost savings by eliminating the need for in-house staff, infrastructure, and technology investments. Service providers leverage economies of scale and expertise to deliver cost-effective solutions.</p>
+    </div>
+</div>
+<div class="benefit-points">
+    <div class="benefit-points-open">
+    <span>Efficiency and Accuracy</span>
+    <a data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+    </div>
+    <div class="collapse mt-2 mb-3" id="collapseExample2">
+        <p>Specialized AP outsourcing providers utilize advanced technologies, automation tools, and streamlined processes to improve efficiency and accuracy. This results in faster invoice processing, fewer errors, and improved vendor relationships.</p>
+    </div>
+    </div>
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Focus on Core Activities</span>
+            <a data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample3">
+            <p>By outsourcing AP functions, organizations can free up valuable time and resources to focus on core business activities, such as strategic planning, customer service, and revenue generation.</p>
+        </div>
+    </div>
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Scalability</span>
+            <a data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample4">
+            <p> AP outsourcing offers scalability to accommodate fluctuations in transaction volumes, business growth, or seasonal demands. Service providers can adjust resources and capacity to meet changing needs quickly and efficiently.</p>
+        </div>
+    </div>
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Access to Expertise</span>
+            <a data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample5">
+            <p>AP outsourcing providers bring specialized expertise, industry knowledge, and best practices to the table. They stay abreast of regulatory changes, technological advancements, and industry trends to ensure compliance and optimization of AP processes.</p>
+        </div>
+    </div>
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Risk Mitigation and Compliance</span>
+            <a data-bs-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample6">
+            <p> Outsourcing AP functions helps mitigate risks associated with fraud, errors, and regulatory non-compliance. Service providers implement robust controls, security measures, and compliance protocols to safeguard against financial losses and reputational damage.</p>
+        </div>
+    </div>  
+    <div class="benefit-points">
+        <div class="benefit-points-open">
+            <span>Enhanced Vendor Relationships</span>
+            <a data-bs-toggle="collapse" href="#collapseExample8" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fa-solid fa-circle-plus"></i></a>
+            </div>
+            <div class="collapse mt-2 mb-3" id="collapseExample8">
+            <p> AP outsourcing can improve vendor relationships by ensuring timely and accurate payments, resolving disputes promptly, and providing transparency into payment status. This fosters trust, collaboration, and long-term partnerships with vendors and suppliers.</p>
+        </div>
+    </div>
+        
+</div>
+
+<div class="container process mt-5 mb-5">  
+    <h1 class="text-center mb-5">Process of Accounts Payable</h1>  
+<ul>
+    <li style="--accent-color:#41516C">
+        <div class="date">Step 1 : Receipt of Invoices</div>
+        <div class="title"></div>
+        <div class="descr">•Invoices are received from vendors for goods or services rendered. <br> •	Invoices may be received via mail, email, electronic data interchange (EDI), or supplier portals.</div>
+    </li>
+    <li style="--accent-color:#41516C">
+        <div class="date">Step 2 : Review and Approval</div>
+        <div class="title"></div>
+        <div class="descr">•	Invoices are reviewed for accuracy, completeness, and compliance with purchase orders or contracts. <br> •	Appropriate approvals are obtained from authorized personnel, such as department heads or managers, based on predetermined approval workflows.</div>
+    </li>
+    <li style="--accent-color:#41516C">
+        <div class="date">Step 3 : Coding and Data Entry</div>
+        <div class="title"></div>
+        <div class="descr">•	Invoices are coded with relevant account codes, cost centers, and project codes for proper allocation and tracking. <br>
+            •	Invoice details, including vendor information, invoice number, invoice date, amount, and line item details, are entered into the accounting system.
+            </div>
+    </li>
+    <li style="--accent-color:#41516C">
+        <div class="date">Step 4 : Matching Invoices</div>
+        <div class="title"></div>
+        <div class="descr">•	Invoices are matched with corresponding purchase orders (POs) to verify the accuracy of quantities, prices, and terms. <br>
+            •	Three-way matching involves comparing the invoice, PO, and goods receipt to ensure consistency and prevent discrepancies.
+            </div>
+    </li>
+    <li style="--accent-color:#41516C">
+        <div class="date">Step 5 : Payment Autherization</div>
+        <div class="title"></div>
+        <div class="descr">•	Invoices are matched with corresponding purchase orders (POs) to verify the accuracy of quantities, prices, and terms. <br>
+            •	Three-way matching involves comparing the invoice, PO, and goods receipt to ensure consistency and prevent discrepancies.
+            </div>
+    </li>
+    <li style="--accent-color:#41516C">
+        <div class="date">Step 6 : Payment Processing</div>
+        <div class="title"></div>
+        <div class="descr">
+            •	Payments to vendors are processed using approved payment methods, such as checks, electronic funds transfers (EFT), automated clearing house (ACH) payments, or virtual credit cards. <br>
+            •	Payment files are generated and transmitted to banks or payment platforms for execution.
+            </div>
+    </li>
+    <li style="--accent-color:#41516C">
+        <div class="date">Step 7 : Reconciliation and Posting</div>
+        <div class="title"></div>
+        <div class="descr">•	Payments made are reconciled with invoices and vendor statements to ensure accuracy and completeness. <br>
+            •	Accounts payable transactions are posted to the general ledger and other relevant accounts in the accounting system.
+            </div>
+    </li>
+    <li style="--accent-color:#41516C">
+        <div class="date">Step 8 : Vendor Communication</div>
+        <div class="title"></div>
+        <div class="descr">•	Communication with vendors is maintained throughout the AP process to address inquiries, resolve disputes, and provide payment status updates. <br>
+            •	Vendor relationships are managed effectively to ensure timely and accurate payments and maintain positive rapport.
+            </div>
+    </li>
+    <li style="--accent-color:#41516C">
+        <div class="date">Step 9 : Reportinga and Analysis</div>
+        <div class="title"></div>
+        <div class="descr">•	Reports and analysis are generated to track AP performance, aging of payables, cash flow projections, and other key metrics. <br>
+            •	Analysis of AP data helps identify trends, outliers, and opportunities for process improvement and optimization.
+            </div>
+    </li>
+    <li style="--accent-color:#41516C">
+        <div class="date">Step 10 : Compliance and Audit</div>
+        <div class="title"></div>
+        <div class="descr">•	AP procedures are designed to ensure compliance with internal policies, industry regulations, and statutory requirements. <br>
+            •	Regular audits of AP processes, controls, and documentation are conducted to verify accuracy, integrity, and adherence to standards.
+            </div>
+    </li>
+</ul>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"  crossorigin="anonymous" ></script>
+</body>
+</html>
